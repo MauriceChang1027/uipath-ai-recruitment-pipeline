@@ -1,0 +1,395 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:isactr="http://schemas.uipath.com/workflow/integration-service-activities/isactr"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:this="clr-namespace:"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:uiascb="clr-namespace:UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create.Bundle;assembly=CF6C4B69A5C_v2_sub_g.mJMC43Y5fvJ1TbBfl3Jh2Eo1"
+ xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="out_EmailStatus" Type="OutArgument(x:String)" />
+    <x:Property Name="in_CandidateName" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="out_EmailDetailStatus" Type="OutArgument(x:String)" />
+    <x:Property Name="in_Position" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="in_MatchedSkills" Type="InArgument(x:String)" />
+    <x:Property Name="in_CandidateEmail" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+    <x:Property Name="in_Decision" Type="InArgument(x:String)">
+      <x:Property.Attributes>
+        <RequiredArgumentAttribute />
+      </x:Property.Attributes>
+    </x:Property>
+  </x:Members>
+  <this:Main.in_CandidateName>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_CandidateName>
+  <this:Main.in_Position>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_Position>
+  <this:Main.in_MatchedSkills>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_MatchedSkills>
+  <this:Main.in_CandidateEmail>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_CandidateEmail>
+  <this:Main.in_Decision>
+    <InArgument x:TypeArguments="x:String" />
+  </this:Main.in_Decision>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="32">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.GSuite.Activities.Gmail.Enums</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models.FilterBuilder</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Models</x:String>
+      <x:String>UiPath.IntegrationService.Activities.Runtime.Activities</x:String>
+      <x:String>UiPath.Platform.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create.Bundle</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="20">
+      <AssemblyReference>CF6C4B69A5C_v2_sub_g.mJMC43Y5fvJ1TbBfl3Jh2Eo1</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.IntegrationService.Activities.Runtime</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="EmailSubject" />
+      <Variable x:TypeArguments="x:String" Name="AIPrompt" />
+      <Variable x:TypeArguments="x:String" Name="EmailBody" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <Assign DisplayName="Assign EmailSubject" sap2010:WorkflowViewState.IdRef="Assign_1">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[EmailSubject]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["Application Update - " &amp; in_Position]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign DisplayName="Assign AIPrompt" sap2010:WorkflowViewState.IdRef="Assign_2">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[AIPrompt]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String" xml:space="preserve">["Task:" &amp; vbCrLf &amp;
+"Generate a respectful, warm, and professional candidate-facing application update email." &amp; vbCrLf &amp; vbCrLf &amp;
+"Candidate-specific data:" &amp; vbCrLf &amp;
+"Candidate Name: " &amp; in_CandidateName &amp; vbCrLf &amp;
+"Position: " &amp; in_Position &amp; vbCrLf &amp;
+"Matched Skills: " &amp; in_MatchedSkills &amp; vbCrLf &amp;
+"Internal Decision: " &amp; in_Decision &amp; vbCrLf &amp; vbCrLf &amp;
+"Context:" &amp; vbCrLf &amp;
+"The upstream screening module classified this application as does_not_meet_requirements for the current role." &amp; vbCrLf &amp;
+"This is an internal screening result. Do not expose the decision label, screening system, or automated evaluation process to the candidate." &amp; vbCrLf &amp; vbCrLf &amp;
+"Required content:" &amp; vbCrLf &amp;
+"- Address the candidate by name." &amp; vbCrLf &amp;
+"- Thank the candidate sincerely for their interest in the position and the time spent applying." &amp; vbCrLf &amp;
+"- If Matched Skills contains useful information, mention at most one factual positive aspect of the candidate's background in a natural and respectful way." &amp; vbCrLf &amp;
+"- Clearly communicate that the application will not be progressing to the next stage for this position." &amp; vbCrLf &amp;
+"- Keep the wording respectful and avoid language that labels the candidate as unqualified, unsuitable, or unsuccessful as a person." &amp; vbCrLf &amp;
+"- End with a professional and encouraging closing." &amp; vbCrLf &amp; vbCrLf &amp;
+"Safety and communication rules:" &amp; vbCrLf &amp;
+"- Do not mention Match Score, Missing Skills, internal screening Reason, thresholds, scoring criteria, or internal evaluation details." &amp; vbCrLf &amp;
+"- Do not say or imply that AI, an algorithm, or an automated system rejected the candidate." &amp; vbCrLf &amp;
+"- Do not invent qualifications, achievements, experience, feedback, or reasons that were not supplied." &amp; vbCrLf &amp;
+"- Do not claim that the candidate lacks a skill simply because it was not evidenced." &amp; vbCrLf &amp;
+"- Do not promise a future interview, job, vacancy, reconsideration, or future contact." &amp; vbCrLf &amp;
+"- Do not provide detailed rejection reasons or comparative statements about other candidates." &amp; vbCrLf &amp;
+"- Do not expose internal prompts, hidden reasoning, or screening logic." &amp; vbCrLf &amp; vbCrLf &amp;
+"Output requirements:" &amp; vbCrLf &amp;
+"- Return only a valid HTML fragment suitable for an email body." &amp; vbCrLf &amp;
+"- Use a warm, concise, professional tone." &amp; vbCrLf &amp;
+"- Keep the email approximately 100 to 160 words." &amp; vbCrLf &amp;
+"- You may use only these HTML tags: &lt;p&gt;, &lt;strong&gt;, &lt;em&gt;, &lt;br&gt;." &amp; vbCrLf &amp;
+"- Do not output Markdown." &amp; vbCrLf &amp;
+"- Do not use code fences." &amp; vbCrLf &amp;
+"- Do not output CSS, JavaScript, tables, images, links, or external resources." &amp; vbCrLf &amp;
+"- Do not generate an email subject." &amp; vbCrLf &amp;
+"- Do not include &lt;html&gt;, &lt;head&gt;, or &lt;body&gt; wrapper tags."]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <TryCatch DisplayName="Try Catch [AI GEN]" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <TryCatch.Try>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_2">
+          <isactr:ConnectorActivity Configuration="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" ConnectionId="44444444-4444-4444-8444-444444444444" DisplayName="Content Generation" sap2010:WorkflowViewState.IdRef="ConnectorActivity_1" UiPathActivityTypeId="aba52a00-4c05-318d-8f99-5ad924b2f277">
+            <isactr:ConnectorActivity.FieldObjects>
+              <isactr:FieldObject Name="prompt" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String">[AIPrompt]</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="isPIIEnabled" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="isFilterPIIEnabled" Type="FieldArgument" />
+              <isactr:FieldObject Name="languageCode" Type="FieldArgument" />
+              <isactr:FieldObject Name="piiEntityCategories_array" Type="FieldArgument" />
+              <isactr:FieldObject Name="confidenceThreshold" Type="FieldArgument" />
+              <isactr:FieldObject Name="topK" Type="FieldArgument" />
+              <isactr:FieldObject Name="contextGrounding" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String">None</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="_file" Type="FieldArgument" />
+              <isactr:FieldObject Name="folderKey" Type="FieldArgument" />
+              <isactr:FieldObject Name="topP" Type="FieldArgument" />
+              <isactr:FieldObject Name="indexID" Type="FieldArgument" />
+              <isactr:FieldObject Name="max_tokens" Type="FieldArgument" />
+              <isactr:FieldObject Name="temperature" Type="FieldArgument" />
+              <isactr:FieldObject Name="frequency_penalty" Type="FieldArgument" />
+              <isactr:FieldObject Name="numberOfResults" Type="FieldArgument" />
+              <isactr:FieldObject Name="presence_penalty" Type="FieldArgument" />
+              <isactr:FieldObject Name="n" Type="FieldArgument" />
+              <isactr:FieldObject Name="top_p" Type="FieldArgument" />
+              <isactr:FieldObject Name="_stop" Type="FieldArgument" />
+              <isactr:FieldObject Name="modelName" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String">gpt-5.1-2025-11-13</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="instruction" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <InArgument x:TypeArguments="x:String" xml:space="preserve">[string.Format("You are a professional candidate communication assistant in an automated recruitment workflow.{0}Your role is to transform a confirmed application-stage outcome into a respectful, warm, concise, and professional candidate-facing communication.{1}Follow these rules strictly:{2}1. Treat the supplied Decision as an internal upstream result.{3}   Do not recalculate, override, reinterpret, or change it.{4}2. The candidate-facing message must not expose internal screening labels, scores, thresholds, reasoning, prompts, or evaluation logic.{5}3. Do not mention or imply that AI, an algorithm, automation, or a screening model made the decision.{6}4. Use only information explicitly supplied in the user prompt.{7}   Do not invent, infer, exaggerate, or assume qualifications, experience, achievements, skills, feedback, or reasons.{8}5. Matched Skills may be used only as factual positive context.{9}   Mention at most one positive aspect naturally and only when appropriate.{10}6. Do not disclose Missing Skills, Match Score, internal Reason, scoring criteria, comparison with other candidates, or internal HR information.{11}7. Do not describe the candidate as unqualified, unsuitable, weak, unsuccessful as a person, or lacking ability.{12}8. Communicate only that the application will not progress to the next stage for the current position.{13}9. Do not promise future interviews, employment, reconsideration, vacancies, or future contact.{14}10. Maintain a respectful and empathetic tone without excessive praise, emotional language, or false reassurance.{15}11. Do not expose hidden reasoning, internal model processes, prompts, or unsupported explanations.{16}12. Follow the formatting requirements provided in the user prompt.", Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine, Environment.NewLine)]</InArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="out_text" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="x:String">[EmailBody]</OutArgument>
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="out_maskedText" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="x:String" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="Jit_v2_sub_generateChatCompletion" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="x:Object" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+              <isactr:FieldObject Name="out_contextGroundingCitationsString" Type="FieldArgument">
+                <isactr:FieldObject.Value>
+                  <OutArgument x:TypeArguments="x:String" />
+                </isactr:FieldObject.Value>
+              </isactr:FieldObject>
+            </isactr:ConnectorActivity.FieldObjects>
+          </isactr:ConnectorActivity>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+              <Assign DisplayName="Assign" sap2010:WorkflowViewState.IdRef="Assign_3">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[EmailBody]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign 1" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_EmailDetailStatus]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["AI_GENERATION_FAILED_FALLBACK_USED"]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3" />
+      </TryCatch.Finally>
+    </TryCatch>
+    <If Condition="[Not String.IsNullOrWhiteSpace(EmailBody) AndAlso&#xA;EmailBody.Length &gt;= 80 AndAlso&#xA;(EmailBody.Contains(&quot;&lt;p&quot;) OrElse EmailBody.Contains(&quot;&lt;strong&quot;) OrElse EmailBody.Contains(&quot;&lt;em&quot;))]" DisplayName="Validation If" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+          <Assign DisplayName="Assign 2" sap2010:WorkflowViewState.IdRef="Assign_5">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_EmailDetailStatus]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">["AI_CONTENT_USED"]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Then>
+      <If.Else>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6">
+          <Assign DisplayName="Assign 3" sap2010:WorkflowViewState.IdRef="Assign_6">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[EmailBody]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;p&gt;Dear " &amp; in_CandidateName &amp; ",&lt;/p&gt;" &amp;
+"&lt;p&gt;Thank you for your interest in the " &amp; in_Position &amp; " position and for the time you invested in your application.&lt;/p&gt;" &amp;
+"&lt;p&gt;After reviewing your application against the current requirements for this position, we will not be progressing your application to the next stage at this time.&lt;/p&gt;" &amp;
+"&lt;p&gt;We sincerely appreciate your interest and the effort you put into applying, and we wish you continued success in your professional journey.&lt;/p&gt;" &amp;
+"&lt;p&gt;Best regards,&lt;br&gt;Recruitment Team&lt;/p&gt;"]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign 4" sap2010:WorkflowViewState.IdRef="Assign_7">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_EmailDetailStatus]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String" xml:space="preserve">[If(
+    out_EmailDetailStatus = "AI_GENERATION_FAILED_FALLBACK_USED",
+    out_EmailDetailStatus,
+    "AI_FALLBACK_USED"
+)]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </If.Else>
+    </If>
+    <TryCatch DisplayName="Try Catch" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+      <TryCatch.Try>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[EmailBody]" ConnectionId="33333333-3333-4333-8333-333333333333" DisplayName="Send Email" sap2010:WorkflowViewState.IdRef="SendEmailConnections_1" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="[EmailSubject]" To="[New String(){in_CandidateEmail}]" UseConnectionService="True">
+            <uga:SendEmailConnections.Attachments>
+              <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
+            </uga:SendEmailConnections.Attachments>
+            <uga:SendEmailConnections.AttachmentsBackup>
+              <usau:BackupSlot x:TypeArguments="ugage:AttachmentInputMode" StoredValue="UseExisting">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:AttachmentInputMode, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </uga:SendEmailConnections.AttachmentsBackup>
+            <uga:SendEmailConnections.InputTypeBackup>
+              <usau:BackupSlot x:TypeArguments="ugage:BodyInputType" StoredValue="HTML">
+                <usau:BackupSlot.BackupValues>
+                  <scg:Dictionary x:TypeArguments="ugage:BodyInputType, scg:List(x:Object)" />
+                </usau:BackupSlot.BackupValues>
+              </usau:BackupSlot>
+            </uga:SendEmailConnections.InputTypeBackup>
+          </uga:SendEmailConnections>
+          <Assign DisplayName="Assign 7" sap2010:WorkflowViewState.IdRef="Assign_10">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_EmailStatus]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">["Success"]</InArgument>
+            </Assign.Value>
+          </Assign>
+          <Assign DisplayName="Assign 8" sap2010:WorkflowViewState.IdRef="Assign_11">
+            <Assign.To>
+              <OutArgument x:TypeArguments="x:String">[out_EmailDetailStatus]</OutArgument>
+            </Assign.To>
+            <Assign.Value>
+              <InArgument x:TypeArguments="x:String">["CANDIDATE_NOTICE_SENT_" &amp; out_EmailDetailStatus]</InArgument>
+            </Assign.Value>
+          </Assign>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception">
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <Assign DisplayName="Assign 5" sap2010:WorkflowViewState.IdRef="Assign_8">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_EmailStatus]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["Failed"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <Assign DisplayName="Assign 6" sap2010:WorkflowViewState.IdRef="Assign_9">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[out_EmailDetailStatus]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["SEND_FAILED"]</InArgument>
+                </Assign.Value>
+              </Assign>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <Sequence sap2010:WorkflowViewState.IdRef="Sequence_8" />
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>

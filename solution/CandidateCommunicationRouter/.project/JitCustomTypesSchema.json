@@ -1,0 +1,2716 @@
+{
+  "ExportedBy": "StudioWeb",
+  "BundleHash": "63r0r7xpgfLkPhjFOgHC8IUvFEbcVBlbYdTxhXXMsyo",
+  "Version": "1.0.0.0",
+  "JitAssemblyCompilerCommands": [
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 1,
+        "IdRef": "ForEachRowConnections`1_1",
+        "Hash": "ForEachRowConnections`1_1|DataRow|9GyRAb485xhcbZZv9AORFm4EMu8PUO78WciATlM0w|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|d6910875-c1ed-4a14-951c-27993d72377f",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [
+          {
+            "ColumnName": "CandidateName",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "CandidateName",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Education",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Education",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "TechSkills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "TechSkills",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Email",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Email",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Status",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Status",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Match Score",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Match Score",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Decision",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Decision",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Reason",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Reason",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Matched Skills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Matched Skills",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Missing Skills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Missing Skills",
+            "Category": "Simplified"
+          }
+        ],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [
+          {
+            "ParentColumnName": "CandidateName",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "CandidateName Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "CandidateName",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "CandidateName ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Education",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Education Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Education",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Education ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "TechSkills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "TechSkills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "TechSkills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "TechSkills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Email",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Email Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Email",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Email ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Status",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Status Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Status",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Status ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Match Score",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Match Score Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Match Score",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Match Score ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Decision",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Decision Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Decision",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Decision ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Reason",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Reason Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Reason",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Reason ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Matched Skills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Matched Skills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Matched Skills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Matched Skills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Missing Skills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Missing Skills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Missing Skills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Missing Skills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          }
+        ],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataRow1",
+        "Hash": "ForEachRowConnections`1_1|DataRow|9GyRAb485xhcbZZv9AORFm4EMu8PUO78WciATlM0w|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|d6910875-c1ed-4a14-951c-27993d72377f",
+        "AssemblyName": "Studio.Generated.TypedDataRow1"
+      }
+    },
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 2,
+        "IdRef": "ForEachRowConnections`1_1",
+        "Hash": "ForEachRowConnections`1_1|DataRow|T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|5fa6c5ed-b849-4f5a-ac83-d6b14f3bb6c4",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataRow2",
+        "Hash": "ForEachRowConnections`1_1|DataRow|T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|5fa6c5ed-b849-4f5a-ac83-d6b14f3bb6c4",
+        "AssemblyName": "Studio.Generated.TypedDataRow2"
+      }
+    },
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 3,
+        "IdRef": "ForEachRowConnections`1_1",
+        "Hash": "ForEachRowConnections`1_1|DataRow|9GyRAb485xhcbZZv9AORFm4EMu8PUO78WciATlM0w|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|47ce526b-b212-4365-a533-7f8a4794097d",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [
+          {
+            "ColumnName": "CandidateName",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "CandidateName",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Education",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Education",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "TechSkills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "TechSkills",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration1",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration1",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration2",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration2",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Company3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Company3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Title3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Title3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "WorkDuration3",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "WorkDuration3",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Email",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Email",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Status",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Status",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Match Score",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Match Score",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Decision",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Decision",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Reason",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Reason",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Matched Skills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Matched Skills",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Missing Skills",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Missing Skills",
+            "Category": "Simplified"
+          }
+        ],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [
+          {
+            "ParentColumnName": "CandidateName",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "CandidateName Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "CandidateName",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "CandidateName ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Education",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Education Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Education",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Education ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "TechSkills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "TechSkills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "TechSkills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "TechSkills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration1",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration1 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration1",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration1 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration2",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration2 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration2",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration2 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Company3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Company3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Title3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Title3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration3",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration3 Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "WorkDuration3",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "WorkDuration3 ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Email",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Email Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Email",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Email ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Status",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Status Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Status",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Status ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Match Score",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Match Score Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Match Score",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Match Score ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Decision",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Decision Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Decision",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Decision ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Reason",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Reason Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Reason",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Reason ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Matched Skills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Matched Skills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Matched Skills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Matched Skills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Missing Skills",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Missing Skills Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Missing Skills",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Missing Skills ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          }
+        ],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataRow3",
+        "Hash": "ForEachRowConnections`1_1|DataRow|9GyRAb485xhcbZZv9AORFm4EMu8PUO78WciATlM0w|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|47ce526b-b212-4365-a533-7f8a4794097d",
+        "AssemblyName": "Studio.Generated.TypedDataRow3"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "Hash": "YDYCA2uDVtuoIRiyylKdoDiLx7g6w1Pb97NDBR3G89LSAhzI67oogv458xsvGyzak1X1htBwcPDLifUKRrAkDQ==",
+        "BundleName": "CF6C4B69A5C_v2_sub_generateChatCompletion_Create",
+        "EntitiesBundle": {
+          "Types": {
+            "message": {
+              "Name": "message",
+              "Properties": [
+                {
+                  "Name": "content",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"content\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "role",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"role\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "choices": {
+              "Name": "choices",
+              "Properties": [
+                {
+                  "Name": "message",
+                  "Type": {
+                    "DefinitionName": "message"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"message\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "index",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"index\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "finish_reason",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"finish_reason\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "usage": {
+              "Name": "usage",
+              "Properties": [
+                {
+                  "Name": "total_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"total_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "prompt_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"prompt_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "completion_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"completion_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "detectedEntities": {
+              "Name": "detectedEntities",
+              "Properties": [
+                {
+                  "Name": "identifier",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"identifier\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "text",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"text\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "confidenceScore",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"confidenceScore\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "category",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"category\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "contextGroundingCitations": {
+              "Name": "contextGroundingCitations",
+              "Properties": [
+                {
+                  "Name": "reference",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"reference\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "source",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"source\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "page_number",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"page_number\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "v2_sub_generateChatCompletion_Create": {
+              "Name": "v2_sub_generateChatCompletion_Create",
+              "Properties": [
+                {
+                  "Name": "choices",
+                  "Type": {
+                    "DefinitionName": "choices"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"choices\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "usage",
+                  "Type": {
+                    "DefinitionName": "usage"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"usage\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "detectedEntities",
+                  "Type": {
+                    "DefinitionName": "detectedEntities"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"detectedEntities\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "contextGroundingCitations",
+                  "Type": {
+                    "DefinitionName": "contextGroundingCitations"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"contextGroundingCitations\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "created",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"created\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "model",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"model\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "id",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"id\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "text",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Order",
+                            "Value": {
+                              "Value": "16",
+                              "Type": {
+                                "ClrType": "System.Int32, System.Private.CoreLib"
+                              }
+                            }
+                          },
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"text\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "_object",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "PropertyName",
+                            "Value": {
+                              "Value": "\"object\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"object\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "maskedText",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Order",
+                            "Value": {
+                              "Value": "17",
+                              "Type": {
+                                "ClrType": "System.Int32, System.Private.CoreLib"
+                              }
+                            }
+                          },
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"maskedText\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "contextGroundingCitationsString",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"contextGroundingCitationsString\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "675e7879-539c-4e58-86c8-dcb50fd5f06d"
+          },
+          "Version": 1
+        }
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create",
+        "Hash": "WURZQ0EydURWdHVvSVJpeXlsS2RvRGlMeDdnNncxUGI5N05EQlIzRzg5TFNBaHpJNjdvb2d2NDU4eHN2R3l6YWsxWDFodEJ3Y1BETGlmVUtSckFrRFE9PQ",
+        "AssemblyName": "CF6C4B69A5C_v2_sub_g.lGnNX4sDNvE1qvLx1aoeC7"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "Hash": "YDYCA2uDVtuoIRiyylKdoDiLx7g6w1Pb97NDBR3G89LSAhzI67oogv458xsvGyzak1X1htBwcPDLifUKRrAkDQ==",
+        "BundleName": "CF6C4B69A5C_v2_sub_generateChatCompletion_Create",
+        "EntitiesBundle": {
+          "Types": {
+            "message": {
+              "Name": "message",
+              "Properties": [
+                {
+                  "Name": "content",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"content\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "role",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"role\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "choices": {
+              "Name": "choices",
+              "Properties": [
+                {
+                  "Name": "message",
+                  "Type": {
+                    "DefinitionName": "message"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"message\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "index",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"index\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "finish_reason",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"finish_reason\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "usage": {
+              "Name": "usage",
+              "Properties": [
+                {
+                  "Name": "total_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"total_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "prompt_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"prompt_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "completion_tokens",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"completion_tokens\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "detectedEntities": {
+              "Name": "detectedEntities",
+              "Properties": [
+                {
+                  "Name": "identifier",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"identifier\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "text",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"text\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "confidenceScore",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"confidenceScore\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "category",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"category\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "contextGroundingCitations": {
+              "Name": "contextGroundingCitations",
+              "Properties": [
+                {
+                  "Name": "reference",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"reference\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "source",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"source\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "page_number",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"page_number\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            },
+            "v2_sub_generateChatCompletion_Create": {
+              "Name": "v2_sub_generateChatCompletion_Create",
+              "Properties": [
+                {
+                  "Name": "choices",
+                  "Type": {
+                    "DefinitionName": "choices"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"choices\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "usage",
+                  "Type": {
+                    "DefinitionName": "usage"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"usage\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "detectedEntities",
+                  "Type": {
+                    "DefinitionName": "detectedEntities"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"detectedEntities\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "contextGroundingCitations",
+                  "Type": {
+                    "DefinitionName": "contextGroundingCitations"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"contextGroundingCitations\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "IsCollection": true,
+                  "CollectionGenericType": {
+                    "ClrType": "System.Collections.Generic.List`1, System.Private.CoreLib"
+                  }
+                },
+                {
+                  "Name": "created",
+                  "Type": {
+                    "ClrType": "System.Nullable`1[[System.Int64, System.Private.CoreLib]], System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"created\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "model",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"model\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "id",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"id\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "text",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Order",
+                            "Value": {
+                              "Value": "16",
+                              "Type": {
+                                "ClrType": "System.Int32, System.Private.CoreLib"
+                              }
+                            }
+                          },
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"text\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "_object",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "Newtonsoft.Json.JsonPropertyAttribute, Newtonsoft.Json"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "PropertyName",
+                            "Value": {
+                              "Value": "\"object\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"object\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "maskedText",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Order",
+                            "Value": {
+                              "Value": "17",
+                              "Type": {
+                                "ClrType": "System.Int32, System.Private.CoreLib"
+                              }
+                            }
+                          },
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"maskedText\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                },
+                {
+                  "Name": "contextGroundingCitationsString",
+                  "Type": {
+                    "ClrType": "System.String, System.Private.CoreLib"
+                  },
+                  "Attributes": {
+                    "Values": [
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.CategoryAttribute, System.ComponentModel.Primitives"
+                        },
+                        "ConstructorArguments": [
+                          {
+                            "Value": "\"Simplified\"",
+                            "Type": {
+                              "ClrType": "System.String, System.Private.CoreLib"
+                            }
+                          }
+                        ],
+                        "NamedArguments": []
+                      },
+                      {
+                        "Type": {
+                          "ClrType": "System.ComponentModel.DataAnnotations.DisplayAttribute, System.ComponentModel.Annotations"
+                        },
+                        "ConstructorArguments": [],
+                        "NamedArguments": [
+                          {
+                            "Name": "Name",
+                            "Value": {
+                              "Value": "\"contextGroundingCitationsString\"",
+                              "Type": {
+                                "ClrType": "System.String, System.Private.CoreLib"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": null
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "8b697cfc-047f-4d53-bd70-4ddc2a0b9ad3"
+          },
+          "Version": 1
+        }
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create",
+        "Hash": "WURZQ0EydURWdHVvSVJpeXlsS2RvRGlMeDdnNncxUGI5N05EQlIzRzg5TFNBaHpJNjdvb2d2NDU4eHN2R3l6YWsxWDFodEJ3Y1BETGlmVUtSckFrRFE9PQ",
+        "AssemblyName": "CF6C4B69A5C_v2_sub_g.mJMC43Y5fvJ1TbBfl3Jh2Eo1"
+      }
+    }
+  ]
+}

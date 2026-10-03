@@ -1,0 +1,2484 @@
+{
+  "ExportedBy": "StudioWeb",
+  "BundleHash": "N4UeCPmroksLtrEUCYSkKGTPVq4ALWPtflJJI7VT0",
+  "Version": "1.0.0.0",
+  "JitAssemblyCompilerCommands": [
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda": {
+              "Name": "CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda",
+              "Properties": [],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "eb2cf3cf-8b9b-4f64-8a10-f3572f2cbade"
+          },
+          "Version": 1
+        },
+        "Hash": "367012054",
+        "BundleName": "CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda",
+        "Hash": "MzY3MDEyMDU0",
+        "AssemblyName": "CustomGptDocumentTyp.LHjqO1wfScE1In5DV9e29g2"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8": {
+              "Name": "CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "AIExperienceSummary",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "f203f88f-afd5-4f3a-99fb-f73a062f8cdd"
+          },
+          "Version": 1
+        },
+        "Hash": "-1986977657",
+        "BundleName": "CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8",
+        "Hash": "LTE5ODY5Nzc2NTc",
+        "AssemblyName": "CustomGptDocumentTyp.wqjeaUDIKQ1pLxEp2qRZB31"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700": {
+              "Name": "CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "AIExperienceSummary",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "9ce733e8-9912-4656-8e94-96db093a7458"
+          },
+          "Version": 1
+        },
+        "Hash": "1551663156",
+        "BundleName": "CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700",
+        "Hash": "MTU1MTY2MzE1Ng",
+        "AssemblyName": "CustomGptDocumentTyp.ZEWKm2YzpXJ1d8Kex1Hnvh1"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D": {
+              "Name": "CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "03a6ae2f-a9de-4396-86bc-0f2773c4ce07"
+          },
+          "Version": 1
+        },
+        "Hash": "1871877250",
+        "BundleName": "CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D",
+        "Hash": "MTg3MTg3NzI1MA",
+        "AssemblyName": "CustomGptDocumentTyp.J3xO03AeMNF1As3nc30sc923"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0": {
+              "Name": "CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "21bcda62-e1d7-42d6-9013-c0aed080076e"
+          },
+          "Version": 1
+        },
+        "Hash": "1871877250",
+        "BundleName": "CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0",
+        "Hash": "MTg3MTg3NzI1MA",
+        "AssemblyName": "CustomGptDocumentTyp.FP7fY3Xom7L1oqOxc17TaYw"
+      }
+    },
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 1,
+        "IdRef": "ReadRangeConnections`1_1",
+        "Hash": "ReadRangeConnections`1_1|DataTable|Js55yoCNWeViONaGAZXGYjqyST9wK4Y9NalsS0bLoQ|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|3f1774a2-323d-4646-9af2-4d6d0aca439b",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [
+          {
+            "ColumnName": "Column A",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column A",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column B",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column B",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column C",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column C",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column D",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column D",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column E",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column E",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column F",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column F",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column G",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column G",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column H",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column H",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column I",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column I",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column J",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column J",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column K",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column K",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column L",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column L",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column M",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column M",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column N",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column N",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column O",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column O",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column P",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column P",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Q",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Q",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column R",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column R",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column S",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column S",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column T",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column T",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column U",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column U",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column V",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column V",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column W",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column W",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column X",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column X",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Y",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Y",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Z",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Z",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column AA",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column AA",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column AB",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column AB",
+            "Category": "Simplified"
+          }
+        ],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [
+          {
+            "ParentColumnName": "Column A",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column A Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column A",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column A ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column B",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column B Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column B",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column B ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column C",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column C Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column C",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column C ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column D",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column D Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column D",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column D ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column E",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column E Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column E",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column E ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column F",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column F Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column F",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column F ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column G",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column G Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column G",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column G ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column H",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column H Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column H",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column H ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column I",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column I Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column I",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column I ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column J",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column J Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column J",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column J ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column K",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column K Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column K",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column K ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column L",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column L Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column L",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column L ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column M",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column M Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column M",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column M ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column N",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column N Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column N",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column N ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column O",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column O Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column O",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column O ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column P",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column P Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column P",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column P ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Q",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Q Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Q",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Q ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column R",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column R Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column R",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column R ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column S",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column S Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column S",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column S ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column T",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column T Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column T",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column T ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column U",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column U Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column U",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column U ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column V",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column V Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column V",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column V ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column W",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column W Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column W",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column W ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column X",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column X Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column X",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column X ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Y",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Y Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Y",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Y ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Z",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Z Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Z",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Z ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AA",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AA Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AA",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AA ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AB",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AB Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AB",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AB ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          }
+        ],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataTable1",
+        "Hash": "ReadRangeConnections`1_1|DataTable|Js55yoCNWeViONaGAZXGYjqyST9wK4Y9NalsS0bLoQ|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|3f1774a2-323d-4646-9af2-4d6d0aca439b",
+        "AssemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    },
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 2,
+        "IdRef": "ReadRangeConnections`1_1",
+        "Hash": "ReadRangeConnections`1_1|DataTable|T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|7ca3938c-a225-4a08-889e-4fa27170fa09",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataTable2",
+        "Hash": "ReadRangeConnections`1_1|DataTable|T1PNoYwrqgwDVLtfmj7L5e0Sq02OEbqHPC8RFhICuUU|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|7ca3938c-a225-4a08-889e-4fa27170fa09",
+        "AssemblyName": "Studio.Generated.TypedDataTable2"
+      }
+    },
+    {
+      "ProviderName": "TypedDataTable",
+      "TypedDataTableDto": {
+        "Id": 3,
+        "IdRef": "ReadRangeConnections`1_1",
+        "Hash": "ReadRangeConnections`1_1|DataTable|Js55yoCNWeViONaGAZXGYjqyST9wK4Y9NalsS0bLoQ|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|8c5b5183-c04e-4787-8546-7c54d975bb85",
+        "DataType": "System.Data.DataTable, System.Data.Common",
+        "Columns": [
+          {
+            "ColumnName": "Column A",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column A",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column B",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column B",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column C",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column C",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column D",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column D",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column E",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column E",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column F",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column F",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column G",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column G",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column H",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column H",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column I",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column I",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column J",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column J",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column K",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column K",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column L",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column L",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column M",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column M",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column N",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column N",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column O",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column O",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column P",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column P",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Q",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Q",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column R",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column R",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column S",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column S",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column T",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column T",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column U",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column U",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column V",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column V",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column W",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column W",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column X",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column X",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Y",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Y",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column Z",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column Z",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column AA",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column AA",
+            "Category": "Simplified"
+          },
+          {
+            "ColumnName": "Column AB",
+            "DataType": "System.String, System.Private.CoreLib",
+            "Name": "Column AB",
+            "Category": "Simplified"
+          }
+        ],
+        "RowExtensionProperties": [
+          {
+            "ColumnName": "SheetsRowIndex",
+            "DataType": "System.Int32, System.Private.CoreLib",
+            "DescriptionKey": "General_RowExtensions_Property_SheetsRowIndex_Description",
+            "Category": "Simplified"
+          }
+        ],
+        "NestedRowExtensionProperties": [
+          {
+            "ParentColumnName": "Column A",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column A Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column A",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column A ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column B",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column B Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column B",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column B ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column C",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column C Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column C",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column C ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column D",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column D Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column D",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column D ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column E",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column E Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column E",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column E ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column F",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column F Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column F",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column F ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column G",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column G Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column G",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column G ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column H",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column H Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column H",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column H ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column I",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column I Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column I",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column I ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column J",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column J Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column J",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column J ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column K",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column K Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column K",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column K ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column L",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column L Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column L",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column L ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column M",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column M Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column M",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column M ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column N",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column N Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column N",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column N ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column O",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column O Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column O",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column O ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column P",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column P Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column P",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column P ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Q",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Q Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Q",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Q ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column R",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column R Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column R",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column R ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column S",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column S Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column S",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column S ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column T",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column T Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column T",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column T ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column U",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column U Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column U",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column U ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column V",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column V Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column V",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column V ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column W",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column W Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column W",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column W ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column X",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column X Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column X",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column X ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Y",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Y Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Y",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Y ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Z",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Z Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column Z",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column Z ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AA",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AA Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AA",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AA ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AB",
+            "Extension": {
+              "ColumnName": "_Address",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AB Address",
+              "DescriptionKey": "General_RowExtensions_Property_Column_Address_Description"
+            }
+          },
+          {
+            "ParentColumnName": "Column AB",
+            "Extension": {
+              "ColumnName": "_ColumnAddress",
+              "DataType": "System.String, System.Private.CoreLib",
+              "Name": "Column AB ColumnAddress",
+              "DescriptionKey": "General_RowExtensions_Property_Column_ColumnAddress_Description"
+            }
+          }
+        ],
+        "ResourceManager": {
+          "ResourceManagerName": "UiPath.GSuite.Properties.UiPath.GSuite",
+          "ResourceManagerAssemblyName": "UiPath.GSuite"
+        },
+        "Namespace": "System.Data"
+      },
+      "EntityAssemblyKey": {
+        "Name": "Studio.Generated.TypedDataTable3",
+        "Hash": "ReadRangeConnections`1_1|DataTable|Js55yoCNWeViONaGAZXGYjqyST9wK4Y9NalsS0bLoQ|M8QgJnMcDYq2DQeuuBU0Jk546eYbnq2FCcwUoYRi4Ss|HT8aFX0uTakdBZzx1gQ7QazRUYM25L1273kAdp3Xng|8c5b5183-c04e-4787-8546-7c54d975bb85",
+        "AssemblyName": "Studio.Generated.TypedDataTable3"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "Items": {
+              "Name": "Items",
+              "Properties": [
+                {
+                  "Name": "Description",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Quantity",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "UnitPrice",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "LineAmount",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "CustomerPurchaseOrderNumberItemLevel",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "LineNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "PartNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            },
+            "Invoices": {
+              "Name": "Invoices",
+              "Properties": [
+                {
+                  "Name": "VendorName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "VendorAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BillingName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BillingAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "ShippingAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "InvoiceNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "CustomerPurchaseOrderNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "VendorVATNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "InvoiceDate",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.DateTime, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TaxAmount",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TotalAmount",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "PaymentTerms",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "NetAmount",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "DueDate",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.DateTime, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Discount",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "ShippingCharges",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "PaymentAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BillingVATNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "ShippingDate",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.DateTime, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "VendorEmailAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BankName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BankAccountNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "IBAN",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "SWIFTCode",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BankAddress",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "BankRoutingNumber",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TaxRate",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.Nullable`1[[System.Double, System.Private.CoreLib]], System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "ShippingMethod",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Currency",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedFieldNoMultivalues`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Items",
+                  "Type": {
+                    "DefinitionName": "Items"
+                  },
+                  "IsCollection": true
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "7dee7be5-fa37-44ec-bd95-dc067d0f9af2"
+          },
+          "Version": 1
+        },
+        "Hash": "-1208105588",
+        "BundleName": "ExtendedExtractionResultsForDocumentData.Invoices"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices",
+        "Hash": "LTEyMDgxMDU1ODg",
+        "AssemblyName": "ExtendedExtractionRe.53luI3HeOoB1Q1kjXWAmtd"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType259469267B86481D97075A2Bfa6539A4": {
+              "Name": "CustomGptDocumentType259469267B86481D97075A2Bfa6539A4",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "28210ed9-0c64-4624-aec1-29a32a263c98"
+          },
+          "Version": 1
+        },
+        "Hash": "1871877250",
+        "BundleName": "CustomGptDocumentType259469267B86481D97075A2Bfa6539A4"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType259469267B86481D97075A2Bfa6539A4",
+        "Hash": "MTg3MTg3NzI1MA",
+        "AssemblyName": "CustomGptDocumentTyp.FdXsB2OCswC1Z1p3fYevCc3"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3": {
+              "Name": "CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "17909cb1-ff93-469c-b586-e00949845db4"
+          },
+          "Version": 1
+        },
+        "Hash": "1871877250",
+        "BundleName": "CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3",
+        "Hash": "MTg3MTg3NzI1MA",
+        "AssemblyName": "CustomGptDocumentTyp.KGeGx3wE2PP16AlN72hvFDn3"
+      }
+    },
+    {
+      "ProviderName": "CustomEntities",
+      "BundleOptions": {
+        "EntitiesBundle": {
+          "Types": {
+            "CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db": {
+              "Name": "CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db",
+              "Properties": [
+                {
+                  "Name": "CandidateName",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Education",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "TechSkills",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Company3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Title3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "Email",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration1",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration2",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                },
+                {
+                  "Name": "WorkDuration3",
+                  "Type": {
+                    "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtractedField`1[[System.String, System.Private.CoreLib]], UiPath.IntelligentOCR.StudioWeb.Activities"
+                  }
+                }
+              ],
+              "Values": [],
+              "BaseType": {
+                "ClrType": "UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction.ExtendedExtractionResultsForDocumentData, UiPath.IntelligentOCR.StudioWeb.Activities"
+              },
+              "GenerateChangeNotifications": true
+            }
+          },
+          "Metadata": {
+            "UniqueAssemblyIdentityId": "400de469-71fc-42c2-a55e-ada0fdf35de9"
+          },
+          "Version": 1
+        },
+        "Hash": "1871877250",
+        "BundleName": "CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db"
+      },
+      "EntityAssemblyKey": {
+        "Name": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db",
+        "Hash": "MTg3MTg3NzI1MA",
+        "AssemblyName": "CustomGptDocumentTyp.E1BlU12NSqF1kVtBw27UthX4"
+      }
+    }
+  ]
+}

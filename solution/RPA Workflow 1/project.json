@@ -1,0 +1,61 @@
+{
+  "name": "RPA Workflow 1",
+  "projectId": "ea00e75a-6b0d-4f0b-a285-3f64306f528f",
+  "previousProjectId": "e8e47c61-da18-4ed4-93dd-6d4775c93dd0",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.GSuite.Activities": "3.11.10",
+    "UiPath.IntegrationService.Activities": "1.31.0",
+    "UiPath.System.Activities": "26.8.0",
+    "UiPath.WebAPI.Activities": "2.5.2"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.194.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "isNonProd": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": true,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "2f0b005e-bc52-4c35-8ab5-a5474e2fbba5",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

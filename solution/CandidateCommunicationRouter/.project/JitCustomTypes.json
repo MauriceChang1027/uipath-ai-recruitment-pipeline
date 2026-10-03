@@ -1,0 +1,68 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "63r0r7xpgfLkPhjFOgHC8IUvFEbcVBlbYdTxhXXMsyo",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [],
+  "discardedAssemblyReplacements": {},
+  "assembliesJitInfo": {
+    "CF6C4B69A5C_v2_sub_g.lGnNX4sDNvE1qvLx1aoeC7": {
+      "createdAt": "2026-09-02T20:23:09.594393+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create.Bundle",
+      "typeNames": [
+        "message",
+        "choices",
+        "usage",
+        "detectedEntities",
+        "contextGroundingCitations",
+        "v2_sub_generateChatCompletion_Create"
+      ]
+    },
+    "CF6C4B69A5C_v2_sub_g.mJMC43Y5fvJ1TbBfl3Jh2Eo1": {
+      "createdAt": "2026-09-03T14:40:33.3884398+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntegrationService.Activities.SWEntities.CF6C4B69A5C_v2_sub_generateChatCompletion_Create.Bundle",
+      "typeNames": [
+        "message",
+        "choices",
+        "usage",
+        "detectedEntities",
+        "contextGroundingCitations",
+        "v2_sub_generateChatCompletion_Create"
+      ]
+    },
+    "Studio.Generated.TypedDataRow1": {
+      "createdAt": "2026-09-03T18:50:08.1244312+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable1",
+        "DataColumnCollection1",
+        "DataRow1",
+        "DataRowCollection1"
+      ]
+    },
+    "Studio.Generated.TypedDataRow2": {
+      "createdAt": "2026-09-03T19:20:33.9381819+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable2",
+        "DataColumnCollection2",
+        "DataRow2",
+        "DataRowCollection2"
+      ]
+    },
+    "Studio.Generated.TypedDataRow3": {
+      "createdAt": "2026-09-03T19:20:40.2488812+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable3",
+        "DataColumnCollection3",
+        "DataRow3",
+        "DataRowCollection3"
+      ]
+    }
+  }
+}

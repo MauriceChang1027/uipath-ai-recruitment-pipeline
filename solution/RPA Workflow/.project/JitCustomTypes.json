@@ -1,0 +1,115 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "N4UeCPmroksLtrEUCYSkKGTPVq4ALWPtflJJI7VT0",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [],
+  "discardedAssemblyReplacements": {},
+  "assembliesJitInfo": {
+    "CustomGptDocumentTyp.LHjqO1wfScE1In5DV9e29g2": {
+      "createdAt": "2026-08-31T16:46:09.6946066+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda"
+      ]
+    },
+    "CustomGptDocumentTyp.wqjeaUDIKQ1pLxEp2qRZB31": {
+      "createdAt": "2026-08-31T16:54:05.2933808+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8.Bundle",
+      "typeNames": [
+        "CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8"
+      ]
+    },
+    "CustomGptDocumentTyp.ZEWKm2YzpXJ1d8Kex1Hnvh1": {
+      "createdAt": "2026-08-31T19:59:16.8367345+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700"
+      ]
+    },
+    "CustomGptDocumentTyp.J3xO03AeMNF1As3nc30sc923": {
+      "createdAt": "2026-08-31T21:29:23.7300238+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D"
+      ]
+    },
+    "CustomGptDocumentTyp.FP7fY3Xom7L1oqOxc17TaYw": {
+      "createdAt": "2026-08-31T21:29:34.9354583+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0"
+      ]
+    },
+    "Studio.Generated.TypedDataTable1": {
+      "createdAt": "2026-09-01T19:25:03.0892329+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable1",
+        "DataColumnCollection1",
+        "DataRow1",
+        "DataRowCollection1"
+      ]
+    },
+    "Studio.Generated.TypedDataTable2": {
+      "createdAt": "2026-09-01T19:25:28.1795506+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable2",
+        "DataColumnCollection2",
+        "DataRow2",
+        "DataRowCollection2"
+      ]
+    },
+    "Studio.Generated.TypedDataTable3": {
+      "createdAt": "2026-09-01T19:25:42.3634803+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable3",
+        "DataColumnCollection3",
+        "DataRow3",
+        "DataRowCollection3"
+      ]
+    },
+    "ExtendedExtractionRe.53luI3HeOoB1Q1kjXWAmtd": {
+      "createdAt": "2026-09-01T20:46:52.4994606+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices.Bundle",
+      "typeNames": [
+        "Items",
+        "Invoices"
+      ]
+    },
+    "CustomGptDocumentTyp.FdXsB2OCswC1Z1p3fYevCc3": {
+      "createdAt": "2026-09-01T20:48:25.012126+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType259469267B86481D97075A2Bfa6539A4.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType259469267B86481D97075A2Bfa6539A4"
+      ]
+    },
+    "CustomGptDocumentTyp.KGeGx3wE2PP16AlN72hvFDn3": {
+      "createdAt": "2026-09-01T20:53:25.9360336+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3.Bundle",
+      "typeNames": [
+        "CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3"
+      ]
+    },
+    "CustomGptDocumentTyp.E1BlU12NSqF1kVtBw27UthX4": {
+      "createdAt": "2026-09-01T21:12:25.3307533+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db.Bundle",
+      "typeNames": [
+        "CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db"
+      ]
+    }
+  }
+}

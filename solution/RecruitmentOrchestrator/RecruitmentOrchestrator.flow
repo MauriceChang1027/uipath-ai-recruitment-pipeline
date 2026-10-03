@@ -1,0 +1,801 @@
+{
+  "id": "2e0cc7ee-87f4-4466-a88b-45ba388a7df6",
+  "version": "1.9",
+  "name": "RecruitmentOrchestrator",
+  "nodes": [
+    {
+      "id": "start",
+      "type": "core.trigger.manual",
+      "typeVersion": "1.0",
+      "display": {
+        "label": "Manual trigger"
+      },
+      "inputs": {
+        "entryPointId": "8ea5cf1d-4359-4dc1-b28a-df53d67a731e",
+        "isDefaultEntryPoint": true
+      }
+    },
+    {
+      "id": "extractResumeData",
+      "type": "uipath.core.rpa-workflow.e7b67096-fee8-4195-89c3-2a84fe1434f8",
+      "typeVersion": "1.0.0",
+      "display": {
+        "label": "1. Resume Date Extraction"
+      },
+      "inputs": {},
+      "outputs": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error"
+        }
+      }
+    },
+    {
+      "id": "judgeEmployee",
+      "type": "uipath.core.rpa-workflow.de33a13c-f79d-489f-bfff-b0bcf14868f6",
+      "typeVersion": "1.0.0",
+      "display": {
+        "label": "2. Judge Employee (Agent 0.1.4)"
+      },
+      "inputs": {},
+      "outputs": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error"
+        }
+      }
+    },
+    {
+      "id": "routeCandidateCommunication",
+      "type": "uipath.core.rpa-workflow.5a381ada-4976-41d3-91d7-a780e98e256e",
+      "typeVersion": "1.0.0",
+      "display": {
+        "label": "3. Candidate Communication Router"
+      },
+      "inputs": {},
+      "outputs": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error"
+        }
+      }
+    },
+    {
+      "id": "pipelineComplete",
+      "type": "core.control.end",
+      "typeVersion": "1.0",
+      "display": {
+        "label": "Recruitment Pipeline Complete"
+      },
+      "inputs": {}
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_start_output_extractResumeData_input",
+      "sourceNodeId": "start",
+      "sourcePort": "output",
+      "targetNodeId": "extractResumeData",
+      "targetPort": "input"
+    },
+    {
+      "id": "edge_extractResumeData_output_judgeEmployee_input",
+      "sourceNodeId": "extractResumeData",
+      "sourcePort": "output",
+      "targetNodeId": "judgeEmployee",
+      "targetPort": "input"
+    },
+    {
+      "id": "edge_judgeEmployee_output_routeCandidateCommunication_input",
+      "sourceNodeId": "judgeEmployee",
+      "sourcePort": "output",
+      "targetNodeId": "routeCandidateCommunication",
+      "targetPort": "input"
+    },
+    {
+      "id": "edge_routeCandidateCommunication_output_pipelineComplete_input",
+      "sourceNodeId": "routeCandidateCommunication",
+      "sourcePort": "output",
+      "targetNodeId": "pipelineComplete",
+      "targetPort": "input"
+    }
+  ],
+  "bindings": [
+    {
+      "id": "bResumeName",
+      "name": "name",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "e7b67096-fee8-4195-89c3-2a84fe1434f8",
+      "default": "RPA Workflow",
+      "propertyAttribute": "name",
+      "resourceSubType": "Process"
+    },
+    {
+      "id": "bResumeFolderPath",
+      "name": "folderPath",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "e7b67096-fee8-4195-89c3-2a84fe1434f8",
+      "default": "",
+      "propertyAttribute": "folderPath",
+      "resourceSubType": "Process"
+    },
+    {
+      "id": "bJudgeName",
+      "name": "name",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "de33a13c-f79d-489f-bfff-b0bcf14868f6",
+      "default": "RPA Workflow 1",
+      "propertyAttribute": "name",
+      "resourceSubType": "Process"
+    },
+    {
+      "id": "bJudgeFolderPath",
+      "name": "folderPath",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "de33a13c-f79d-489f-bfff-b0bcf14868f6",
+      "default": "",
+      "propertyAttribute": "folderPath",
+      "resourceSubType": "Process"
+    },
+    {
+      "id": "bRouterName",
+      "name": "name",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "5a381ada-4976-41d3-91d7-a780e98e256e",
+      "default": "CandidateCommunicationRouter",
+      "propertyAttribute": "name",
+      "resourceSubType": "Process"
+    },
+    {
+      "id": "bRouterFolderPath",
+      "name": "folderPath",
+      "type": "string",
+      "resource": "process",
+      "resourceKey": "5a381ada-4976-41d3-91d7-a780e98e256e",
+      "default": "",
+      "propertyAttribute": "folderPath",
+      "resourceSubType": "Process"
+    }
+  ],
+  "definitions": [
+    {
+      "nodeType": "core.trigger.manual",
+      "version": "1.0",
+      "category": "trigger",
+      "description": "Start the process manually",
+      "tags": [
+        "trigger",
+        "start",
+        "manual"
+      ],
+      "sortOrder": 40,
+      "display": {
+        "label": "Manual trigger",
+        "icon": "play",
+        "shape": "circle"
+      },
+      "handleConfiguration": [
+        {
+          "position": "right",
+          "handles": [
+            {
+              "id": "output",
+              "type": "source",
+              "handleType": "output",
+              "showButton": true,
+              "constraints": {
+                "forbiddenTargetCategories": [
+                  "trigger"
+                ]
+              }
+            }
+          ],
+          "visible": true
+        }
+      ],
+      "model": {
+        "type": "bpmn:StartEvent",
+        "entryPointId": true
+      },
+      "outputDefinition": {
+        "output": {
+          "type": "object",
+          "description": "Data passed when manually triggering the process.",
+          "source": "null",
+          "var": "output"
+        }
+      },
+      "toolbarExtensions": {
+        "design": {
+          "actions": [
+            {
+              "id": "change-trigger-type",
+              "icon": "square-mouse-pointer",
+              "label": "Change trigger type"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "nodeType": "uipath.core.rpa-workflow.e7b67096-fee8-4195-89c3-2a84fe1434f8",
+      "version": "1.0.0",
+      "category": "rpa-workflow",
+      "runtimeConstraints": {
+        "exclude": [
+          "api-function"
+        ]
+      },
+      "description": "(In-solution) RPA Workflow",
+      "tags": [
+        "in-solution",
+        "local"
+      ],
+      "sortOrder": 530,
+      "supportsErrorHandling": true,
+      "display": {
+        "label": "RPA Workflow",
+        "icon": "rpa"
+      },
+      "handleConfiguration": [
+        {
+          "position": "left",
+          "handles": [
+            {
+              "id": "input",
+              "type": "target",
+              "handleType": "input"
+            }
+          ]
+        },
+        {
+          "position": "right",
+          "handles": [
+            {
+              "id": "output",
+              "type": "source",
+              "handleType": "output"
+            }
+          ]
+        }
+      ],
+      "toolbarExtensions": {
+        "design": {
+          "actions": [
+            {
+              "id": "open-workflow",
+              "icon": "external-link",
+              "label": "Open"
+            }
+          ]
+        }
+      },
+      "projectId": "fab8efc4-6b71-4f1f-9cac-ffb5fcf96c8b",
+      "model": {
+        "type": "bpmn:ServiceTask",
+        "serviceType": "Orchestrator.StartJob",
+        "version": "v2",
+        "bindings": {
+          "resource": "process",
+          "resourceSubType": "Process",
+          "resourceKey": "e7b67096-fee8-4195-89c3-2a84fe1434f8",
+          "orchestratorType": "process",
+          "values": [
+            {
+              "name": "name",
+              "propertyAttribute": "name",
+              "default": "RPA Workflow"
+            },
+            {
+              "name": "folderPath",
+              "propertyAttribute": "folderPath",
+              "default": ""
+            }
+          ]
+        },
+        "projectId": "fab8efc4-6b71-4f1f-9cac-ffb5fcf96c8b",
+        "projectName": "RPA Workflow",
+        "context": [
+          {
+            "name": "name",
+            "type": "string",
+            "value": "<bindings.name>"
+          },
+          {
+            "name": "folderPath",
+            "type": "string",
+            "value": "<bindings.folderPath>"
+          },
+          {
+            "name": "_label",
+            "type": "string",
+            "value": "RPA Workflow"
+          }
+        ]
+      },
+      "inputDefinition": {},
+      "inputDefaults": {},
+      "outputDefinition": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error",
+          "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "required": [
+              "code",
+              "message",
+              "detail",
+              "category",
+              "status"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Error code as a string"
+              },
+              "message": {
+                "type": "string",
+                "description": "High-level error message"
+              },
+              "detail": {
+                "type": "string",
+                "description": "Detailed error description"
+              },
+              "category": {
+                "type": "string",
+                "description": "Error category"
+              },
+              "status": {
+                "type": "integer",
+                "description": "HTTP status code"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "debug": {
+        "runtime": "bpmnEngine"
+      }
+    },
+    {
+      "nodeType": "uipath.core.rpa-workflow.de33a13c-f79d-489f-bfff-b0bcf14868f6",
+      "version": "1.0.0",
+      "category": "rpa-workflow",
+      "runtimeConstraints": {
+        "exclude": [
+          "api-function"
+        ]
+      },
+      "description": "(In-solution) RPA Workflow 1",
+      "tags": [
+        "in-solution",
+        "local"
+      ],
+      "sortOrder": 530,
+      "supportsErrorHandling": true,
+      "display": {
+        "label": "RPA Workflow 1",
+        "icon": "rpa"
+      },
+      "handleConfiguration": [
+        {
+          "position": "left",
+          "handles": [
+            {
+              "id": "input",
+              "type": "target",
+              "handleType": "input"
+            }
+          ]
+        },
+        {
+          "position": "right",
+          "handles": [
+            {
+              "id": "output",
+              "type": "source",
+              "handleType": "output"
+            }
+          ]
+        }
+      ],
+      "toolbarExtensions": {
+        "design": {
+          "actions": [
+            {
+              "id": "open-workflow",
+              "icon": "external-link",
+              "label": "Open"
+            }
+          ]
+        }
+      },
+      "projectId": "57b5ef68-c5e0-4b01-9891-32271c507661",
+      "model": {
+        "type": "bpmn:ServiceTask",
+        "serviceType": "Orchestrator.StartJob",
+        "version": "v2",
+        "bindings": {
+          "resource": "process",
+          "resourceSubType": "Process",
+          "resourceKey": "de33a13c-f79d-489f-bfff-b0bcf14868f6",
+          "orchestratorType": "process",
+          "values": [
+            {
+              "name": "name",
+              "propertyAttribute": "name",
+              "default": "RPA Workflow 1"
+            },
+            {
+              "name": "folderPath",
+              "propertyAttribute": "folderPath",
+              "default": ""
+            }
+          ]
+        },
+        "projectId": "57b5ef68-c5e0-4b01-9891-32271c507661",
+        "projectName": "RPA Workflow 1",
+        "context": [
+          {
+            "name": "name",
+            "type": "string",
+            "value": "<bindings.name>"
+          },
+          {
+            "name": "folderPath",
+            "type": "string",
+            "value": "<bindings.folderPath>"
+          },
+          {
+            "name": "_label",
+            "type": "string",
+            "value": "RPA Workflow 1"
+          }
+        ]
+      },
+      "inputDefinition": {},
+      "inputDefaults": {},
+      "outputDefinition": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error",
+          "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "required": [
+              "code",
+              "message",
+              "detail",
+              "category",
+              "status"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Error code as a string"
+              },
+              "message": {
+                "type": "string",
+                "description": "High-level error message"
+              },
+              "detail": {
+                "type": "string",
+                "description": "Detailed error description"
+              },
+              "category": {
+                "type": "string",
+                "description": "Error category"
+              },
+              "status": {
+                "type": "integer",
+                "description": "HTTP status code"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "debug": {
+        "runtime": "bpmnEngine"
+      }
+    },
+    {
+      "nodeType": "uipath.core.rpa-workflow.5a381ada-4976-41d3-91d7-a780e98e256e",
+      "version": "1.0.0",
+      "category": "rpa-workflow",
+      "runtimeConstraints": {
+        "exclude": [
+          "api-function"
+        ]
+      },
+      "description": "(In-solution) CandidateCommunicationRouter",
+      "tags": [
+        "in-solution",
+        "local"
+      ],
+      "sortOrder": 530,
+      "supportsErrorHandling": true,
+      "display": {
+        "label": "CandidateCommunicationRouter",
+        "icon": "rpa"
+      },
+      "handleConfiguration": [
+        {
+          "position": "left",
+          "handles": [
+            {
+              "id": "input",
+              "type": "target",
+              "handleType": "input"
+            }
+          ]
+        },
+        {
+          "position": "right",
+          "handles": [
+            {
+              "id": "output",
+              "type": "source",
+              "handleType": "output"
+            }
+          ]
+        }
+      ],
+      "toolbarExtensions": {
+        "design": {
+          "actions": [
+            {
+              "id": "open-workflow",
+              "icon": "external-link",
+              "label": "Open"
+            }
+          ]
+        }
+      },
+      "projectId": "5e869616-45aa-48fb-86f2-e9d413e6a7df",
+      "model": {
+        "type": "bpmn:ServiceTask",
+        "serviceType": "Orchestrator.StartJob",
+        "version": "v2",
+        "bindings": {
+          "resource": "process",
+          "resourceSubType": "Process",
+          "resourceKey": "5a381ada-4976-41d3-91d7-a780e98e256e",
+          "orchestratorType": "process",
+          "values": [
+            {
+              "name": "name",
+              "propertyAttribute": "name",
+              "default": "CandidateCommunicationRouter"
+            },
+            {
+              "name": "folderPath",
+              "propertyAttribute": "folderPath",
+              "default": ""
+            }
+          ]
+        },
+        "projectId": "5e869616-45aa-48fb-86f2-e9d413e6a7df",
+        "projectName": "CandidateCommunicationRouter",
+        "context": [
+          {
+            "name": "name",
+            "type": "string",
+            "value": "<bindings.name>"
+          },
+          {
+            "name": "folderPath",
+            "type": "string",
+            "value": "<bindings.folderPath>"
+          },
+          {
+            "name": "_label",
+            "type": "string",
+            "value": "CandidateCommunicationRouter"
+          }
+        ]
+      },
+      "inputDefinition": {},
+      "inputDefaults": {},
+      "outputDefinition": {
+        "error": {
+          "type": "object",
+          "description": "Error information if the node fails",
+          "source": "=Error",
+          "var": "error",
+          "schema": {
+            "$schema": "http://json-schema.org/draft-07/schema#",
+            "type": "object",
+            "required": [
+              "code",
+              "message",
+              "detail",
+              "category",
+              "status"
+            ],
+            "properties": {
+              "code": {
+                "type": "string",
+                "description": "Error code as a string"
+              },
+              "message": {
+                "type": "string",
+                "description": "High-level error message"
+              },
+              "detail": {
+                "type": "string",
+                "description": "Detailed error description"
+              },
+              "category": {
+                "type": "string",
+                "description": "Error category"
+              },
+              "status": {
+                "type": "integer",
+                "description": "HTTP status code"
+              }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "debug": {
+        "runtime": "bpmnEngine"
+      }
+    },
+    {
+      "nodeType": "core.control.end",
+      "version": "1.0",
+      "category": "control-flow",
+      "description": "Mark the end of a process path",
+      "tags": [
+        "control-flow",
+        "end",
+        "finish",
+        "complete"
+      ],
+      "sortOrder": 20,
+      "display": {
+        "label": "End",
+        "icon": "circle-check",
+        "shape": "circle"
+      },
+      "handleConfiguration": [
+        {
+          "position": "left",
+          "handles": [
+            {
+              "id": "input",
+              "type": "target",
+              "handleType": "input"
+            }
+          ]
+        }
+      ],
+      "model": {
+        "type": "bpmn:EndEvent"
+      },
+      "runtimeConstraints": {
+        "exclude": [
+          "api-function"
+        ]
+      }
+    }
+  ],
+  "runtime": "maestro",
+  "variables": {
+    "nodes": [
+      {
+        "id": "start.output",
+        "type": "object",
+        "description": "Data passed when manually triggering the process.",
+        "binding": {
+          "nodeId": "start",
+          "outputId": "output"
+        }
+      },
+      {
+        "id": "extractResumeData.error",
+        "type": "object",
+        "description": "Error information if the node fails",
+        "binding": {
+          "nodeId": "extractResumeData",
+          "outputId": "error"
+        }
+      },
+      {
+        "id": "judgeEmployee.error",
+        "type": "object",
+        "description": "Error information if the node fails",
+        "binding": {
+          "nodeId": "judgeEmployee",
+          "outputId": "error"
+        }
+      },
+      {
+        "id": "routeCandidateCommunication.error",
+        "type": "object",
+        "description": "Error information if the node fails",
+        "binding": {
+          "nodeId": "routeCandidateCommunication",
+          "outputId": "error"
+        }
+      }
+    ]
+  },
+  "layout": {
+    "nodes": {
+      "start": {
+        "position": {
+          "x": -192,
+          "y": 0
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        }
+      },
+      "extractResumeData": {
+        "position": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        },
+        "collapsed": false
+      },
+      "judgeEmployee": {
+        "position": {
+          "x": 192,
+          "y": 0
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        },
+        "collapsed": false
+      },
+      "routeCandidateCommunication": {
+        "position": {
+          "x": 384,
+          "y": 0
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        },
+        "collapsed": false
+      },
+      "pipelineComplete": {
+        "position": {
+          "x": 576,
+          "y": 0
+        },
+        "size": {
+          "width": 96,
+          "height": 96
+        },
+        "collapsed": false
+      }
+    }
+  }
+}

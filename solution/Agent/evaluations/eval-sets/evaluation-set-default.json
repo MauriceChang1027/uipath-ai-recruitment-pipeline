@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "id": "DefaultEvaluationSet",
+  "name": "Default Evaluation Set",
+  "evaluatorRefs": [
+    "DefaultContainsEvaluator"
+  ],
+  "evaluations": [
+    {
+      "id": "eval-001",
+      "name": "Sample Evaluation",
+      "inputs": {
+        "query": "Your input here"
+      },
+      "evaluationCriterias": {
+        "DefaultContainsEvaluator": null
+      }
+    }
+  ]
+}

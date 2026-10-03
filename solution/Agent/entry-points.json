@@ -1,0 +1,521 @@
+{
+    "$schema": "https://cloud.uipath.com/draft/2024-12/entry-point",
+    "$id": "entry-points.json",
+    "entryPoints": [
+        {
+            "filePath": "agent",
+            "uniqueId": "3d7ccacd-aee0-4b97-877b-cf65487dc308",
+            "type": "agent",
+            "input": {
+                "type": "object",
+                "properties": {
+                    "candidate": {
+                        "properties": {
+                            "CandidateName": {
+                                "title": "Candidatename",
+                                "type": "string"
+                            },
+                            "Education": {
+                                "title": "Education",
+                                "type": "string"
+                            },
+                            "TechSkills": {
+                                "title": "Techskills",
+                                "type": "string"
+                            },
+                            "WorkExperience": {
+                                "items": {
+                                    "properties": {
+                                        "Company": {
+                                            "title": "Company",
+                                            "type": "string"
+                                        },
+                                        "Title": {
+                                            "title": "Title",
+                                            "type": "string"
+                                        },
+                                        "Duration": {
+                                            "title": "Duration",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "required": [
+                                        "Company",
+                                        "Title",
+                                        "Duration"
+                                    ],
+                                    "title": "WorkExperience",
+                                    "type": "object"
+                                },
+                                "title": "Workexperience",
+                                "type": "array"
+                            }
+                        },
+                        "required": [
+                            "CandidateName",
+                            "Education",
+                            "TechSkills",
+                            "WorkExperience"
+                        ],
+                        "title": "Candidate",
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "candidate"
+                ]
+            },
+            "output": {
+                "type": "object",
+                "properties": {
+                    "CandidateName": {
+                        "title": "Candidatename",
+                        "type": "string"
+                    },
+                    "Position": {
+                        "title": "Position",
+                        "type": "string"
+                    },
+                    "FitStatus": {
+                        "enum": [
+                            "meets_requirements",
+                            "needs_review",
+                            "does_not_meet_requirements"
+                        ],
+                        "title": "Fitstatus",
+                        "type": "string"
+                    },
+                    "FitStatusLabel": {
+                        "title": "Fitstatuslabel",
+                        "type": "string"
+                    },
+                    "MeetsMinimumRequirements": {
+                        "type": "boolean"
+                    },
+                    "FinalScore": {
+                        "maximum": 100,
+                        "minimum": 0,
+                        "title": "Finalscore",
+                        "type": "integer"
+                    },
+                    "Summary": {
+                        "title": "Summary",
+                        "type": "string"
+                    },
+                    "DimensionScores": {
+                        "properties": {
+                            "Education": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Education",
+                                "type": "integer"
+                            },
+                            "TechnicalSkills": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Technicalskills",
+                                "type": "integer"
+                            },
+                            "RelevantEngineeringExperience": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Relevantengineeringexperience",
+                                "type": "integer"
+                            },
+                            "LeadershipOwnership": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Leadershipownership",
+                                "type": "integer"
+                            },
+                            "EngineeringDepth": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Engineeringdepth",
+                                "type": "integer"
+                            },
+                            "AIReadiness": {
+                                "maximum": 100,
+                                "minimum": 0,
+                                "title": "Aireadiness",
+                                "type": "integer"
+                            }
+                        },
+                        "required": [
+                            "Education",
+                            "TechnicalSkills",
+                            "RelevantEngineeringExperience",
+                            "LeadershipOwnership",
+                            "EngineeringDepth",
+                            "AIReadiness"
+                        ],
+                        "title": "DimensionScores",
+                        "type": "object"
+                    },
+                    "MatchedSkills": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Matchedskills",
+                        "type": "array"
+                    },
+                    "MissingSkills": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "title": "Missingskills",
+                        "type": "array"
+                    },
+                    "ExperienceInformationInsufficient": {
+                        "title": "Experienceinformationinsufficient",
+                        "type": "boolean"
+                    },
+                    "DetailedAssessment": {
+                        "properties": {
+                            "Education": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "TechnicalSkills": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "RelevantEngineeringExperience": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "LeadershipOwnership": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "EngineeringDepth": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "AIReadiness": {
+                                "properties": {
+                                    "Score": {
+                                        "maximum": 100,
+                                        "minimum": 0,
+                                        "title": "Score",
+                                        "type": "integer"
+                                    },
+                                    "Evidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Evidence",
+                                        "type": "array"
+                                    },
+                                    "MissingEvidence": {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "title": "Missingevidence",
+                                        "type": "array"
+                                    },
+                                    "Confidence": {
+                                        "enum": [
+                                            "high",
+                                            "medium",
+                                            "low"
+                                        ],
+                                        "title": "Confidence",
+                                        "type": "string"
+                                    }
+                                },
+                                "required": [
+                                    "Score",
+                                    "Evidence",
+                                    "MissingEvidence",
+                                    "Confidence"
+                                ],
+                                "title": "DimensionScore",
+                                "type": "object"
+                            },
+                            "MatchedSkills": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "title": "Matchedskills",
+                                "type": "array"
+                            },
+                            "MissingSkills": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "title": "Missingskills",
+                                "type": "array"
+                            },
+                            "ExperienceInformationInsufficient": {
+                                "title": "Experienceinformationinsufficient",
+                                "type": "boolean"
+                            }
+                        },
+                        "required": [
+                            "Education",
+                            "TechnicalSkills",
+                            "RelevantEngineeringExperience",
+                            "LeadershipOwnership",
+                            "EngineeringDepth",
+                            "AIReadiness",
+                            "MatchedSkills",
+                            "MissingSkills",
+                            "ExperienceInformationInsufficient"
+                        ],
+                        "title": "CandidateAssessment",
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "CandidateName",
+                    "Position",
+                    "FitStatus",
+                    "FitStatusLabel",
+                    "MeetsMinimumRequirements",
+                    "FinalScore",
+                    "Summary",
+                    "DimensionScores",
+                    "MatchedSkills",
+                    "MissingSkills",
+                    "ExperienceInformationInsufficient",
+                    "DetailedAssessment"
+                ]
+            },
+            "graph": {
+                "nodes": [
+                    {
+                        "id": "__start__",
+                        "name": "__start__",
+                        "type": "__start__",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "evaluate_candidate",
+                        "name": "evaluate_candidate",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "build_response",
+                        "name": "build_response",
+                        "type": "node",
+                        "subgraph": null,
+                        "metadata": {}
+                    },
+                    {
+                        "id": "__end__",
+                        "name": "__end__",
+                        "type": "__end__",
+                        "subgraph": null,
+                        "metadata": {}
+                    }
+                ],
+                "edges": [
+                    {
+                        "source": "__start__",
+                        "target": "evaluate_candidate",
+                        "label": null
+                    },
+                    {
+                        "source": "evaluate_candidate",
+                        "target": "build_response",
+                        "label": null
+                    },
+                    {
+                        "source": "build_response",
+                        "target": "__end__",
+                        "label": null
+                    }
+                ]
+            }
+        }
+    ]
+}

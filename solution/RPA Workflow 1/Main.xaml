@@ -1,0 +1,495 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataRow7"
+ xmlns:uasj="clr-namespace:UiPath.Activities.System.Jobs;assembly=UiPath.System.Activities"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities"
+ xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:uwavsdb="clr-namespace:UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON77ab35.Bundle;assembly=DeserializeJSON77ab3.dDoAJ2oZUWM1F6hFElsysN4"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="47">
+      <x:String>System.Collections</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Activities.System.Jobs</x:String>
+      <x:String>Microsoft.Rest</x:String>
+      <x:String>UiPath.Orchestrator.Client.Models</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONdf2999.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON02d54b.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONa94b24.Bundle</x:String>
+      <x:String>UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON77ab35.Bundle</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="44">
+      <AssemblyReference>Studio.Generated.TypedDataRow7</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow6</AssemblyReference>
+      <AssemblyReference>DeserializeJSON77ab3.dDoAJ2oZUWM1F6hFElsysN4</AssemblyReference>
+      <AssemblyReference>DeserializeJSONa94b2.43haQ1PyfcC1v7wVD1nApyv</AssemblyReference>
+      <AssemblyReference>DeserializeJSON02d54.GejwW2GX8HB1HSF2D1LdGRj2</AssemblyReference>
+      <AssemblyReference>DeserializeJSONdf299.GMnZD423TGJ13npLj2XBYqK</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow5</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow4</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow1</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
+      <AssemblyReference>System.Xml.XmlSerializer</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>Microsoft.Rest.ClientRuntime</AssemblyReference>
+      <AssemblyReference>System.Net.Http</AssemblyReference>
+      <AssemblyReference>UiPath.OrchestratorClient</AssemblyReference>
+      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="CandidateName" />
+      <Variable x:TypeArguments="x:String" Name="Education" />
+      <Variable x:TypeArguments="x:String" Name="TechSkills" />
+      <Variable x:TypeArguments="x:String" Name="Company1" />
+      <Variable x:TypeArguments="x:String" Name="Title1" />
+      <Variable x:TypeArguments="x:String" Name="WorkDuration1" />
+      <Variable x:TypeArguments="x:String" Name="Company2" />
+      <Variable x:TypeArguments="x:String" Name="Title2" />
+      <Variable x:TypeArguments="x:String" Name="WorkDuration2" />
+      <Variable x:TypeArguments="x:String" Name="Company3" />
+      <Variable x:TypeArguments="x:String" Name="Title3" />
+      <Variable x:TypeArguments="x:String" Name="WorkDuration3" />
+      <Variable x:TypeArguments="ui:OrchestratorJob" Default="[new UiPath.Core.Activities.OrchestratorJob]" Name="Result" />
+      <Variable x:TypeArguments="x:String" Name="outputArguments">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">RunJob_4</x:String>
+            <x:String x:Key="SourcePropertyName">Output</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="uwavsdb:DeserializeJSON77ab35" Default="[new UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON77ab35.Bundle.DeserializeJSON77ab35]" Name="jsonObject" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uga:ForEachRowConnections x:TypeArguments="sd:DataRow7" ConnectionAccountName="{x:Null}" ConnectionId="22222222-2222-4222-8222-222222222222" Length="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" CurrentItemVariableName="CurrentRow" DisplayName="For Each Row in Spreadsheet" EmptyRowAction="Skip" HasHeaders="True" sap2010:WorkflowViewState.IdRef="ForEachRowConnections`1_1" ItemSelectionMode="Browse" Range="工作表1" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+      <uga:ForEachRowConnections.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow7, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="sd:DataRow7" Name="CurrentRow" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentRowIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Assign DisplayName="CandidateName" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CandidateName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.CandidateName]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Education" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Education]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Education]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="TechSkills" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[TechSkills]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.TechSkills]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Company1" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Company1]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Company1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Title1" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Title1]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Title1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="WorkDuration1" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[WorkDuration1]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.WorkDuration1]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Company2" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Company2]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Company2]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Title2" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Title2]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Title2]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="WorkDuration2" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[WorkDuration2]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.WorkDuration2]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Company3" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Company3]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Company3]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Title3" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Title3]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.Title3]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="WorkDuration3" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[WorkDuration3]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow.WorkDuration3]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[CurrentRow.Status = &quot;Pending&quot;]" DisplayName="If" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <TryCatch DisplayName="Try Catch" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+                    <TryCatch.Try>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <uasj:RunJob DisplayName="Run Agent: Agent" sap2010:WorkflowViewState.IdRef="RunJob_4" ProcessName="Agent">
+                          <uasj:RunJob.Arguments>
+                            <scg:Dictionary x:TypeArguments="x:String, Argument" />
+                          </uasj:RunJob.Arguments>
+                          <uasj:RunJob.Input>
+                            <InArgument x:TypeArguments="x:Object" xml:space="preserve">[New With {
+    .candidate = New With {
+        .CandidateName = CandidateName,
+        .Education = Education,
+        .TechSkills = TechSkills,
+        .WorkExperience = New Object() {
+            New With {
+                .Company = Company1,
+                .Title = Title1,
+                .Duration = WorkDuration1
+            },
+            New With {
+                .Company = Company2,
+                .Title = Title2,
+                .Duration = WorkDuration2
+            },
+            New With {
+                .Company = Company3,
+                .Title = Title3,
+                .Duration = WorkDuration3
+            }
+        }
+    }
+}]</InArgument>
+                          </uasj:RunJob.Input>
+                          <uasj:RunJob.Output>
+                            <OutArgument x:TypeArguments="x:String">[outputArguments]</OutArgument>
+                          </uasj:RunJob.Output>
+                        </uasj:RunJob>
+                        <ui:DeserializeJson x:TypeArguments="uwavsdb:DeserializeJSON77ab35" Settings="{x:Null}" sap:WorkflowViewStateService.ViewState="{x:Null}" DisplayName="Deserialize JSON" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[jsonObject]" JsonSample="{}{&#xA;  &quot;CandidateName&quot;: &quot;cc&quot;,&#xA;  &quot;Position&quot;: &quot;Software Engineer, Product (Singapore)&quot;,&#xA;  &quot;FitStatus&quot;: &quot;does_not_meet_requirements&quot;,&#xA;  &quot;FitStatusLabel&quot;: &quot;现有资料未满足岗位要求&quot;,&#xA;  &quot;MeetsMinimumRequirements&quot;: false,&#xA;  &quot;FinalScore&quot;: 34,&#xA;  &quot;Summary&quot;: &quot;候选人综合匹配分为 34 分。&quot;,&#xA;  &quot;ExperienceInformationInsufficient&quot;: false,&#xA;&quot;MissingSkills&quot;: [&#xA;&quot;C/C++&quot;,&#xA;&quot;Swift&quot;],&#xA;&quot;MatchedSkills&quot;: [&#xA;&quot;Python&quot;,&#xA;&quot;Java&quot;]&#xA;}" JsonString="[outputArguments]" />
+                      </Sequence>
+                    </TryCatch.Try>
+                    <TryCatch.Catches>
+                      <Catch x:TypeArguments="s:Exception">
+                        <ActivityAction x:TypeArguments="s:Exception">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                          </ActivityAction.Argument>
+                          <Sequence sap2010:WorkflowViewState.IdRef="Sequence_7">
+                            <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Error" Message="[&quot;AI服务出现错误&quot;+exception.Message]" />
+                          </Sequence>
+                        </ActivityAction>
+                      </Catch>
+                    </TryCatch.Catches>
+                    <TryCatch.Finally>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+                    </TryCatch.Finally>
+                  </TryCatch>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;N&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Status" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;Completed&quot;]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;O&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write MatchScore" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_4" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[string.Format(&quot;{0}&quot;, jsonObject.FinalScore.Value)]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;P&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Decision" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_5" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[string.Format(&quot;{0}&quot;, jsonObject.FitStatus)]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;Q&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Reason" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_6" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[string.Format(&quot;{0}&quot;, jsonObject.Summary)]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;R&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write MatchedSkills" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_7" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[string.Format(&quot;{0}&quot;, String.Join(&quot;, &quot;, jsonObject.MatchedSkills))]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID5}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                  <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;S&quot; + (CurrentRowIndex + 2).ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write MissingSkills" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_8" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[String.Join(&quot;, &quot;, jsonObject.MissingSkills)]">
+                    <uga:WriteCellConnections.FileIdBackup>
+                      <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
+                        <usau:BackupSlot.BackupValues>
+                          <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                        </usau:BackupSlot.BackupValues>
+                      </usau:BackupSlot>
+                    </uga:WriteCellConnections.FileIdBackup>
+                    <uga:WriteCellConnections.Item>
+                      <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+                        <ugam:DriveItemArgument.DriveId>
+                          <InArgument x:TypeArguments="x:String" />
+                        </ugam:DriveItemArgument.DriveId>
+                        <ugam:DriveItemArgument.ParentIdFullPathHint>
+                          <InArgument x:TypeArguments="x:String">
+                            <Literal x:TypeArguments="x:String" Value="" />
+                          </InArgument>
+                        </ugam:DriveItemArgument.ParentIdFullPathHint>
+                      </ugam:DriveItemArgument>
+                    </uga:WriteCellConnections.Item>
+                  </uga:WriteCellConnections>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4" />
+              </If.Else>
+            </If>
+          </Sequence>
+        </ActivityAction>
+      </uga:ForEachRowConnections.Body>
+      <uga:ForEachRowConnections.ColumnNames>
+        <x:Array Type="x:String">
+          <x:String>CandidateName</x:String>
+          <x:String>Education</x:String>
+          <x:String>TechSkills</x:String>
+          <x:String>Company1</x:String>
+          <x:String>Title1</x:String>
+          <x:String>WorkDuration1</x:String>
+          <x:String>Company2</x:String>
+          <x:String>Title2</x:String>
+          <x:String>WorkDuration2</x:String>
+          <x:String>Company3</x:String>
+          <x:String>Title3</x:String>
+          <x:String>WorkDuration3</x:String>
+          <x:String>Email</x:String>
+          <x:String>Status</x:String>
+          <x:String>Match Score</x:String>
+          <x:String>Decision</x:String>
+          <x:String>Reason</x:String>
+          <x:String>Matched Skills</x:String>
+          <x:String>Missing Skills</x:String>
+        </x:Array>
+      </uga:ForEachRowConnections.ColumnNames>
+      <uga:ForEachRowConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:ForEachRowConnections.FileIdBackup>
+      <uga:ForEachRowConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:ForEachRowConnections.Item>
+      <uga:ForEachRowConnections.RangeMetadata>
+        <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
+      </uga:ForEachRowConnections.RangeMetadata>
+    </uga:ForEachRowConnections>
+  </Sequence>
+</Activity>

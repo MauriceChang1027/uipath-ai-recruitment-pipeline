@@ -1,0 +1,8 @@
+*.xaml text eol=lf diff
+*.flow text eol=lf
+*.json text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.png binary
+*.dll binary
+*.zip binary

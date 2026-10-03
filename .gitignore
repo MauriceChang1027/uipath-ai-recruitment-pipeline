@@ -1,0 +1,64 @@
+# UiPath generated state and build output
+**/.local/*
+!**/.local/.jit/
+**/.local/.jit/*
+!**/.local/.jit/pack-staging/
+**/.local/.jit/pack-staging/*
+!**/.local/.jit/pack-staging/CustomGptDocumentTyp.E1BlU12NSqF1kVtBw27UthX4.dll
+!**/.local/.jit/pack-staging/CustomGptDocumentTyp.FP7fY3Xom7L1oqOxc17TaYw.dll
+!**/.local/.jit/pack-staging/DeserializeJSON77ab3.dDoAJ2oZUWM1F6hFElsysN4.dll
+!**/.local/.jit/pack-staging/Studio.Generated.TypedDataRow7.dll
+!**/.local/.jit/pack-staging/CF6C4B69A5C_v2_sub_g.lGnNX4sDNvE1qvLx1aoeC7.dll
+!**/.local/.jit/pack-staging/Studio.Generated.TypedDataRow3.dll
+# This filename is required only by CandidateCommunicationRouter.
+solution/RPA Workflow 1/.local/.jit/pack-staging/Studio.Generated.TypedDataRow3.dll
+**/.project/*
+!**/.project/JitCustomTypes.json
+!**/.project/JitCustomTypesSchema.json
+.settings/
+**/.entities/*
+!**/.entities/EntitiesBundle.N4UeCPmroksLtrEUCYSkKGTPVq4ALWPtflJJI7VT0.zip
+!**/.entities/EntitiesBundle.n2Eh45bxon4yDFKtHThKnYa7qq9Emtoe3CyiIFwxYc.zip
+!**/.entities/EntitiesBundle.63r0r7xpgfLkPhjFOgHC8IUvFEbcVBlbYdTxhXXMsyo.zip
+.objects/
+.tmh/
+.uipath/
+resources/solution_folder/
+userProfile/
+solution-output/
+dist/
+*.uis
+*.nupkg
+*.zip
+
+# Required Studio-generated compile-time artifacts (override the generic ZIP rule)
+!**/.entities/EntitiesBundle.N4UeCPmroksLtrEUCYSkKGTPVq4ALWPtflJJI7VT0.zip
+!**/.entities/EntitiesBundle.n2Eh45bxon4yDFKtHThKnYa7qq9Emtoe3CyiIFwxYc.zip
+!**/.entities/EntitiesBundle.63r0r7xpgfLkPhjFOgHC8IUvFEbcVBlbYdTxhXXMsyo.zip
+
+# Python and coded-agent local state
+.venv/
+__pycache__/
+*.py[cod]
+.env
+eval-results.json
+__uipath/
+
+# Dependencies, tools, and IDE files
+node_modules/
+.npm-local/
+.nuget/
+.uvtools/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Personal data and local test material
+screen-cap/
+CV/
+candidate-data/
+*.pdf
+*.docx
+deploy-config*.json
+debug_overwrites.json

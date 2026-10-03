@@ -1,0 +1,73 @@
+{
+  "name": "CandidateCommunicationRouter",
+  "projectId": "4a729774-be20-4f5d-b9f9-4aaae4ec8b3d",
+  "previousProjectId": "65d57ca6-0bb8-4a6d-bda6-5d9578c3a3a7",
+  "main": "ROUTER.xaml",
+  "dependencies": {
+    "UiPath.GSuite.Activities": "3.11.10",
+    "UiPath.IntegrationService.Activities": "1.31.0",
+    "UiPath.System.Activities": "26.8.0",
+    "UiPath.WebAPI.Activities": "2.5.2"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "26.0.194.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "isNonProd": false,
+    "requiresUserInteraction": false,
+    "supportsPersistence": false,
+    "workflowSerialization": "NewtonsoftJson",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "ROUTER.xaml",
+      "uniqueId": "64bbf33c-9db1-4d51-8b87-1d287e9426c9",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "NOTIFY.xaml",
+      "uniqueId": "9b753361-7136-48fa-93b2-232ab78572a4",
+      "input": [],
+      "output": []
+    },
+    {
+      "filePath": "NOTICE.xaml",
+      "uniqueId": "de040eed-f0f7-4585-81c4-bc9ae01f91c3",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Portable"
+}

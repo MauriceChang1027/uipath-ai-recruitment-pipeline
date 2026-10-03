@@ -1,0 +1,796 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=Studio.Generated.TypedDataRow3"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities"
+ xmlns:ugsm="clr-namespace:UiPath.GSuite.Sheets.Models;assembly=UiPath.GSuite"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="35">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>System</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Microsoft.VisualBasic.CompilerServices</x:String>
+      <x:String>System.Text.RegularExpressions</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="30">
+      <AssemblyReference>Studio.Generated.TypedDataRow3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataRow1</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
+      <AssemblyReference>System.Xml.XmlSerializer</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic.Core</AssemblyReference>
+      <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="CandidateName" />
+      <Variable x:TypeArguments="x:String" Name="CandidateEmail" />
+      <Variable x:TypeArguments="x:String" Name="CandidateStatus" />
+      <Variable x:TypeArguments="x:String" Name="MatchScore" />
+      <Variable x:TypeArguments="x:String" Name="Decision" />
+      <Variable x:TypeArguments="x:String" Name="NormalizedDecision" />
+      <Variable x:TypeArguments="x:String" Name="Reason" />
+      <Variable x:TypeArguments="x:String" Name="MatchedSkills" />
+      <Variable x:TypeArguments="x:String" Name="MissingSkills" />
+      <Variable x:TypeArguments="x:String" Name="ExistingEmailStatus" />
+      <Variable x:TypeArguments="x:String" Name="EmailStatus" />
+      <Variable x:TypeArguments="x:String" Name="EmailDetailStatus" />
+      <Variable x:TypeArguments="x:String" Name="ReviewType" />
+      <Variable x:TypeArguments="x:Boolean" Default="[Nothing]" Name="IsInputValid" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;hr@example.com&quot;]" Name="HREmail" />
+      <Variable x:TypeArguments="x:String" Default="[&quot;Software Engineer, Product (Singapore)&quot;]" Name="Position" />
+      <Variable x:TypeArguments="x:String" Name="CurrentRowNumber" />
+      <Variable x:TypeArguments="x:String" Name="CommunicationRoute" />
+      <Variable x:TypeArguments="x:String" Name="RecipientEmail" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="T1" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_3" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;EmailStatus&quot;]">
+      <uga:WriteCellConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:WriteCellConnections.FileIdBackup>
+      <uga:WriteCellConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:WriteCellConnections.Item>
+    </uga:WriteCellConnections>
+    <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="U1" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_4" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;EmailDetailStatus&quot;]">
+      <uga:WriteCellConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:WriteCellConnections.FileIdBackup>
+      <uga:WriteCellConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:WriteCellConnections.Item>
+    </uga:WriteCellConnections>
+    <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="V1" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 4" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_5" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;CommunicationRoute&quot;]">
+      <uga:WriteCellConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:WriteCellConnections.FileIdBackup>
+      <uga:WriteCellConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:WriteCellConnections.Item>
+    </uga:WriteCellConnections>
+    <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="W1" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 5" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_6" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;RecipientEmail&quot;]">
+      <uga:WriteCellConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:WriteCellConnections.FileIdBackup>
+      <uga:WriteCellConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:WriteCellConnections.Item>
+    </uga:WriteCellConnections>
+    <Assign DisplayName="Assign 30" sap2010:WorkflowViewState.IdRef="Assign_33">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[CurrentRowNumber]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["2"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uga:ForEachRowConnections x:TypeArguments="sd:DataRow3" ConnectionAccountName="{x:Null}" Length="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" TemplateBrowserItemFriendlyName="{x:Null}" TemplateBrowserItemId="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionId="22222222-2222-4222-8222-222222222222" CurrentItemVariableName="CurrentRow" DisplayName="For Each Row in Spreadsheet" EmptyRowAction="Skip" HasHeaders="True" sap2010:WorkflowViewState.IdRef="ForEachRowConnections`1_1" ItemSelectionMode="Browse" Range="工作表1" ReadAs="Values" UseConnectionService="True" WorkingWithTemplateSpreadsheet="False">
+      <uga:ForEachRowConnections.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow3, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="sd:DataRow3" Name="CurrentRow" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentRowIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Assign DisplayName="Assign" sap2010:WorkflowViewState.IdRef="Assign_1">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CandidateName]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("CandidateName").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uga:ReadCellConnections x:TypeArguments="x:String" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;T&quot; &amp; CurrentRowNumber]" CellValueType="Text" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Read Cell" HideCell="False" sap2010:WorkflowViewState.IdRef="ReadCellConnections`1_1" ItemSelectionMode="Browse" RangeLocation="工作表1" Result="[ExistingEmailStatus]" UseConnectionService="True" WhatToRead="Values">
+              <uga:ReadCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:ReadCellConnections.FileIdBackup>
+              <uga:ReadCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID5}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:ReadCellConnections.Item>
+            </uga:ReadCellConnections>
+            <Assign DisplayName="Assign 1" sap2010:WorkflowViewState.IdRef="Assign_2">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CandidateEmail]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Email").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 2" sap2010:WorkflowViewState.IdRef="Assign_3">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CandidateStatus]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Status").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 3" sap2010:WorkflowViewState.IdRef="Assign_4">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[MatchScore]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Match Score").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 4" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Decision]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Decision").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 5" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[Reason]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Reason").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 6" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[MatchedSkills]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Matched Skills").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 7" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[MissingSkills]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[CurrentRow("Missing Skills").ToString.Trim]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 9" sap2010:WorkflowViewState.IdRef="Assign_10">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[NormalizedDecision]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[Decision.Trim.ToLower]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 10" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Boolean">[IsInputValid]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Boolean" xml:space="preserve">[Not String.IsNullOrWhiteSpace(CandidateName) AndAlso
+CandidateStatus.Trim.ToLower = "completed" AndAlso
+(
+    NormalizedDecision = "meets_requirements" OrElse
+    NormalizedDecision = "needs_review" OrElse
+    NormalizedDecision = "does_not_meet_requirements"
+) AndAlso
+System.Text.RegularExpressions.Regex.IsMatch(MatchScore.Trim, "^\d{1,3}$") AndAlso
+CInt(MatchScore) &gt;= 0 AndAlso
+CInt(MatchScore) &lt;= 100]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 11" sap2010:WorkflowViewState.IdRef="Assign_12">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[EmailStatus]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[""]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 12" sap2010:WorkflowViewState.IdRef="Assign_13">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[EmailDetailStatus]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[""]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 13" sap2010:WorkflowViewState.IdRef="Assign_14">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[ReviewType]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[""]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 28" sap2010:WorkflowViewState.IdRef="Assign_31">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CommunicationRoute]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[""]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign DisplayName="Assign 29" sap2010:WorkflowViewState.IdRef="Assign_32">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[RecipientEmail]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[""]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <If Condition="[IsInputValid]" DisplayName="If" sap2010:WorkflowViewState.IdRef="If_1">
+              <If.Then>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_3">
+                  <If Condition="[ExistingEmailStatus.Trim.ToLower &lt;&gt; &quot;success&quot;]" DisplayName="If 1" sap2010:WorkflowViewState.IdRef="If_2">
+                    <If.Then>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_5">
+                        <Switch x:TypeArguments="x:String" DisplayName="Switch" Expression="[NormalizedDecision]" sap2010:WorkflowViewState.IdRef="Switch`1_1">
+                          <Switch.Default>
+                            <Sequence sap2010:WorkflowViewState.IdRef="Sequence_11" />
+                          </Switch.Default>
+                          <Sequence x:Key="meets_requirements" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                            <Assign DisplayName="Assign 14" sap2010:WorkflowViewState.IdRef="Assign_15">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[ReviewType]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["HR_REVIEW"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign 21" sap2010:WorkflowViewState.IdRef="Assign_22">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[CommunicationRoute]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["HR_REVIEW"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign 22" sap2010:WorkflowViewState.IdRef="Assign_23">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[RecipientEmail]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[HREmail]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="NOTIFY - Invoke Workflow File (NOTIFY.xaml)" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="NOTIFY.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Position">[string.Format("{0}", Position)]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MatchScore">[MatchScore]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Decision">[Decision]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_CandidateName">[CandidateName]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Reason">[Reason]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MatchedSkills">[MatchedSkills]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MissingSkills">[MissingSkills]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_HREmail">[HREmail]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_ReviewType">[ReviewType]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_EmailStatus">[EmailStatus]</OutArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_EmailDetailStatus">[EmailDetailStatus]</OutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                          <Sequence x:Key="needs_review" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                            <Assign DisplayName="Assign 15" sap2010:WorkflowViewState.IdRef="Assign_16">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[ReviewType]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["MANUAL_REVIEW"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign 21 1" sap2010:WorkflowViewState.IdRef="Assign_25">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[CommunicationRoute]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["HR_MANUAL_REVIEW"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign 23" sap2010:WorkflowViewState.IdRef="Assign_26">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[RecipientEmail]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[HREmail]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="NOTIFY - Invoke Workflow File (NOTIFY.xaml)" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="NOTIFY.xaml">
+                              <ui:InvokeWorkflowFile.Arguments>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Position">[Position]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MatchScore">[MatchScore]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Decision">[Decision]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_CandidateName">[CandidateName]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_Reason">[Reason]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MatchedSkills">[string.Format("{0}", MatchedSkills)]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_MissingSkills">[MissingSkills]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_HREmail">[HREmail]</InArgument>
+                                <InArgument x:TypeArguments="x:String" x:Key="in_ReviewType">[ReviewType]</InArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_EmailStatus">[EmailStatus]</OutArgument>
+                                <OutArgument x:TypeArguments="x:String" x:Key="out_EmailDetailStatus">[EmailDetailStatus]</OutArgument>
+                              </ui:InvokeWorkflowFile.Arguments>
+                            </ui:InvokeWorkflowFile>
+                          </Sequence>
+                          <Sequence x:Key="does_not_meet_requirements" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                            <Assign DisplayName="Assign 24" sap2010:WorkflowViewState.IdRef="Assign_27">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[CommunicationRoute]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">["CANDIDATE_NOTICE"]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <Assign DisplayName="Assign 25" sap2010:WorkflowViewState.IdRef="Assign_28">
+                              <Assign.To>
+                                <OutArgument x:TypeArguments="x:String">[RecipientEmail]</OutArgument>
+                              </Assign.To>
+                              <Assign.Value>
+                                <InArgument x:TypeArguments="x:String">[CandidateEmail]</InArgument>
+                              </Assign.Value>
+                            </Assign>
+                            <If Condition="[Not String.IsNullOrWhiteSpace(CandidateEmail) AndAlso&#xA;System.Text.RegularExpressions.Regex.IsMatch(&#xA;    CandidateEmail.Trim,&#xA;    &quot;^[^@\s]+@[^@\s]+\.[^@\s]+$&quot;&#xA;)]" DisplayName="If 2" sap2010:WorkflowViewState.IdRef="If_3">
+                              <If.Then>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_15">
+                                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="False" DisplayName="NOTICE - Invoke Workflow File (NOTICE.xaml)" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="NOTICE.xaml">
+                                    <ui:InvokeWorkflowFile.Arguments>
+                                      <OutArgument x:TypeArguments="x:String" x:Key="out_EmailStatus">[EmailStatus]</OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_CandidateName">[CandidateName]</InArgument>
+                                      <OutArgument x:TypeArguments="x:String" x:Key="out_EmailDetailStatus">[EmailDetailStatus]</OutArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_Position">[Position]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_MatchedSkills">[string.Format("{0}", MatchedSkills)]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_CandidateEmail">[CandidateEmail]</InArgument>
+                                      <InArgument x:TypeArguments="x:String" x:Key="in_Decision">[Decision]</InArgument>
+                                    </ui:InvokeWorkflowFile.Arguments>
+                                  </ui:InvokeWorkflowFile>
+                                </Sequence>
+                              </If.Then>
+                              <If.Else>
+                                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_16">
+                                  <Assign DisplayName="Assign 16" sap2010:WorkflowViewState.IdRef="Assign_17">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[EmailStatus]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">["Failed"]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <Assign DisplayName="Assign 17" sap2010:WorkflowViewState.IdRef="Assign_18">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[EmailDetailStatus]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">["INVALID_CANDIDATE_EMAIL"]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                </Sequence>
+                              </If.Else>
+                            </If>
+                          </Sequence>
+                        </Switch>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;T&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_7" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[EmailStatus]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;U&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 6" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_8" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[EmailDetailStatus]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID7" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID7}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;V&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 7" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_9" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[CommunicationRoute]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID8" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID8}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;W&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 8" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_10" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[RecipientEmail]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID9" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID9}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_6" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Then>
+              <If.Else>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <If Condition="[ExistingEmailStatus.Trim.ToLower &lt;&gt; &quot;success&quot; AndAlso&#xA;CandidateStatus.Trim.ToLower = &quot;completed&quot;]" DisplayName="If 3" sap2010:WorkflowViewState.IdRef="If_4">
+                    <If.Then>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <Assign DisplayName="Assign 18" sap2010:WorkflowViewState.IdRef="Assign_19">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EmailStatus]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[ "Failed"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign 19" sap2010:WorkflowViewState.IdRef="Assign_20">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[EmailDetailStatus]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["INVALID_INPUT"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign 26" sap2010:WorkflowViewState.IdRef="Assign_29">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[CommunicationRoute]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">["INVALID_INPUT"]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <Assign DisplayName="Assign 27" sap2010:WorkflowViewState.IdRef="Assign_30">
+                          <Assign.To>
+                            <OutArgument x:TypeArguments="x:String">[RecipientEmail]</OutArgument>
+                          </Assign.To>
+                          <Assign.Value>
+                            <InArgument x:TypeArguments="x:String">[""]</InArgument>
+                          </Assign.Value>
+                        </Assign>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;T&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 9" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_11" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[EmailStatus]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID10" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID10}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;U&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 6 1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_12" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[EmailDetailStatus]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID11" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID11}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;V&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 7 1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_13" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[CommunicationRoute]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID12" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID12}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                        <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;W&quot; &amp; CurrentRowNumber]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell 8 1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_14" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[RecipientEmail]">
+                          <uga:WriteCellConnections.FileIdBackup>
+                            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID13" StoredValue="Browse">
+                              <usau:BackupSlot.BackupValues>
+                                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                              </usau:BackupSlot.BackupValues>
+                            </usau:BackupSlot>
+                          </uga:WriteCellConnections.FileIdBackup>
+                          <uga:WriteCellConnections.Item>
+                            <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID13}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                              <ugam:DriveItemArgument.DriveId>
+                                <InArgument x:TypeArguments="x:String" />
+                              </ugam:DriveItemArgument.DriveId>
+                              <ugam:DriveItemArgument.ParentIdFullPathHint>
+                                <InArgument x:TypeArguments="x:String">
+                                  <Literal x:TypeArguments="x:String" Value="" />
+                                </InArgument>
+                              </ugam:DriveItemArgument.ParentIdFullPathHint>
+                            </ugam:DriveItemArgument>
+                          </uga:WriteCellConnections.Item>
+                        </uga:WriteCellConnections>
+                      </Sequence>
+                    </If.Then>
+                    <If.Else>
+                      <Sequence sap2010:WorkflowViewState.IdRef="Sequence_18" />
+                    </If.Else>
+                  </If>
+                </Sequence>
+              </If.Else>
+            </If>
+            <Assign DisplayName="Assign 31" sap2010:WorkflowViewState.IdRef="Assign_34">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[CurrentRowNumber]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[(CInt(CurrentRowNumber) + 1).ToString]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uga:ForEachRowConnections.Body>
+      <uga:ForEachRowConnections.ColumnNames>
+        <x:Array Type="x:String">
+          <x:String>CandidateName</x:String>
+          <x:String>Education</x:String>
+          <x:String>TechSkills</x:String>
+          <x:String>Company1</x:String>
+          <x:String>Title1</x:String>
+          <x:String>WorkDuration1</x:String>
+          <x:String>Company2</x:String>
+          <x:String>Title2</x:String>
+          <x:String>WorkDuration2</x:String>
+          <x:String>Company3</x:String>
+          <x:String>Title3</x:String>
+          <x:String>WorkDuration3</x:String>
+          <x:String>Email</x:String>
+          <x:String>Status</x:String>
+          <x:String>Match Score</x:String>
+          <x:String>Decision</x:String>
+          <x:String>Reason</x:String>
+          <x:String>Matched Skills</x:String>
+          <x:String>Missing Skills</x:String>
+        </x:Array>
+      </uga:ForEachRowConnections.ColumnNames>
+      <uga:ForEachRowConnections.FileIdBackup>
+        <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:ForEachRowConnections.FileIdBackup>
+      <uga:ForEachRowConnections.Item>
+        <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:ForEachRowConnections.Item>
+      <uga:ForEachRowConnections.RangeMetadata>
+        <ugsm:RangeMetadataSlim ColumnStart="1" RangeType="Range" />
+      </uga:ForEachRowConnections.RangeMetadata>
+    </uga:ForEachRowConnections>
+  </Sequence>
+</Activity>

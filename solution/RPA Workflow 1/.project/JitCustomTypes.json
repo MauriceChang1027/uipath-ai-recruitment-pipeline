@@ -1,0 +1,118 @@
+{
+  "version": "3.0.0.0",
+  "bundleHash": "n2Eh45bxon4yDFKtHThKnYa7qq9Emtoe3CyiIFwxYc",
+  "addedAssemblyNames": [],
+  "discardedAssemblyNames": [],
+  "discardedAssemblyReplacements": {},
+  "assembliesJitInfo": {
+    "Studio.Generated.TypedDataRow1": {
+      "createdAt": "2026-08-31T15:37:20.7770525+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable1",
+        "DataColumnCollection1",
+        "DataRow1",
+        "DataRowCollection1"
+      ]
+    },
+    "Studio.Generated.TypedDataRow2": {
+      "createdAt": "2026-08-31T20:57:11.1655451+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable2",
+        "DataColumnCollection2",
+        "DataRow2",
+        "DataRowCollection2"
+      ]
+    },
+    "Studio.Generated.TypedDataRow3": {
+      "createdAt": "2026-08-31T20:57:17.4662307+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable3",
+        "DataColumnCollection3",
+        "DataRow3",
+        "DataRowCollection3"
+      ]
+    },
+    "Studio.Generated.TypedDataRow4": {
+      "createdAt": "2026-08-31T21:02:20.5887789+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable4",
+        "DataColumnCollection4",
+        "DataRow4",
+        "DataRowCollection4"
+      ]
+    },
+    "Studio.Generated.TypedDataRow5": {
+      "createdAt": "2026-08-31T21:02:26.838362+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable5",
+        "DataColumnCollection5",
+        "DataRow5",
+        "DataRowCollection5"
+      ]
+    },
+    "DeserializeJSONdf299.GMnZD423TGJ13npLj2XBYqK": {
+      "createdAt": "2026-09-01T18:15:11.5393781+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONdf2999.Bundle",
+      "typeNames": [
+        "DeserializeJSONdf2999"
+      ]
+    },
+    "DeserializeJSON02d54.GejwW2GX8HB1HSF2D1LdGRj2": {
+      "createdAt": "2026-09-01T18:22:42.1712787+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON02d54b.Bundle",
+      "typeNames": [
+        "DeserializeJSON02d54b"
+      ]
+    },
+    "DeserializeJSONa94b2.43haQ1PyfcC1v7wVD1nApyv": {
+      "createdAt": "2026-09-01T18:23:02.1589945+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSONa94b24.Bundle",
+      "typeNames": [
+        "DeserializeJSONa94b24"
+      ]
+    },
+    "DeserializeJSON77ab3.dDoAJ2oZUWM1F6hFElsysN4": {
+      "createdAt": "2026-09-01T18:23:19.9867272+08:00",
+      "providerName": "CustomEntities",
+      "rootNamespace": "UiPath.Web.Activities.ViewModels.SWEntities.DeserializeJSON77ab35.Bundle",
+      "typeNames": [
+        "DeserializeJSON77ab35"
+      ]
+    },
+    "Studio.Generated.TypedDataRow6": {
+      "createdAt": "2026-09-02T21:16:13.5842696+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable6",
+        "DataColumnCollection6",
+        "DataRow6",
+        "DataRowCollection6"
+      ]
+    },
+    "Studio.Generated.TypedDataRow7": {
+      "createdAt": "2026-09-02T21:16:34.9746125+08:00",
+      "providerName": "TypedDataTable",
+      "rootNamespace": "System.Data",
+      "typeNames": [
+        "DataTable7",
+        "DataColumnCollection7",
+        "DataRow7",
+        "DataRowCollection7"
+      ]
+    }
+  }
+}

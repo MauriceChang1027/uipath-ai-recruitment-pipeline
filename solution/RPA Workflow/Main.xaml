@@ -1,0 +1,863 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main"
+ xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities"
+ xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+ xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr"
+ xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib"
+ xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation"
+ xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation"
+ xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib"
+ xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common"
+ xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities"
+ xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ugadf="clr-namespace:UiPath.GSuite.Activities.Drive.Filters;assembly=UiPath.GSuite.Activities"
+ xmlns:ugae="clr-namespace:UiPath.GSuite.Activities.Enums;assembly=UiPath.GSuite.Activities"
+ xmlns:ugam="clr-namespace:UiPath.GSuite.Activities.Models;assembly=UiPath.GSuite.Activities"
+ xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite"
+ xmlns:ui="http://schemas.uipath.com/workflow/activities"
+ xmlns:uisad="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction;assembly=UiPath.IntelligentOCR.StudioWeb.Activities"
+ xmlns:uisascb="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db.Bundle;assembly=CustomGptDocumentTyp.E1BlU12NSqF1kVtBw27UthX4"
+ xmlns:uisascb1="clr-namespace:UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0.Bundle;assembly=CustomGptDocumentTyp.FP7fY3Xom7L1oqOxc17TaYw"
+ xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities"
+ xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="55">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.GSuite.Sheets.Enums</x:String>
+      <x:String>UiPath.GSuite.Sheets.Models</x:String>
+      <x:String>UiPath.DocumentUnderstanding.Common.SDK.Discovery.Model</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DataExtraction</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.DocumentClassification</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.DataExtraction</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Results</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts.Dom</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities</x:String>
+      <x:String>UiPath.DocumentProcessing.Contracts</x:String>
+      <x:String>UiPath.GSuite.Activities.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Filters</x:String>
+      <x:String>UiPath.GSuite.Activities.Filters</x:String>
+      <x:String>UiPath.GSuite.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType10450D23F3434F61A9D90D1Fba608Bda.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeB38B57128D0A4462931AEc45469965F8.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType286F0D3341Ff43E89B47675021Ae1700.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType3Aaae337C2A14Fa896D07F7Cabf9709D.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.ExtendedExtractionResultsForDocumentData.Invoices.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType259469267B86481D97075A2Bfa6539A4.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentType0Dd5Ebc7E1324005992CE35176Eb7Bd3.Bundle</x:String>
+      <x:String>UiPath.IntelligentOCR.StudioWeb.Activities.SWEntities.CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db.Bundle</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="48">
+      <AssemblyReference>CustomGptDocumentTyp.E1BlU12NSqF1kVtBw27UthX4</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.KGeGx3wE2PP16AlN72hvFDn3</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.FdXsB2OCswC1Z1p3fYevCc3</AssemblyReference>
+      <AssemblyReference>ExtendedExtractionRe.53luI3HeOoB1Q1kjXWAmtd</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.FP7fY3Xom7L1oqOxc17TaYw</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.J3xO03AeMNF1As3nc30sc923</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.ZEWKm2YzpXJ1d8Kex1Hnvh1</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.wqjeaUDIKQ1pLxEp2qRZB31</AssemblyReference>
+      <AssemblyReference>CustomGptDocumentTyp.LHjqO1wfScE1In5DV9e29g2</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Runtime</AssemblyReference>
+      <AssemblyReference>netstandard</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>System.Reflection</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR.StudioWeb.Activities</AssemblyReference>
+      <AssemblyReference>FSharp.Core</AssemblyReference>
+      <AssemblyReference>UiPath.IntelligentOCR</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentProcessing.Contracts</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.ReaderWriter</AssemblyReference>
+      <AssemblyReference>System.Xml.XmlSerializer</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.DocumentUnderstanding.Common.SDK</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Reflection.Primitives</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Globalization</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="356,732" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Default="[1]" Name="CurrentRowNumber" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisascb1:CustomGptDocumentType2C15256F402E4Bf78C55C8D4572766E0)" Name="documentData_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:String x:Key="SourceIdRef">ExtractDocumentDataWithDocumentData`1_1</x:String>
+            <x:String x:Key="SourcePropertyName">ExtractionResults</x:String>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </Variable>
+      <Variable x:TypeArguments="sd:DataTable" Default="[new System.Data.DataTable With {.TableName = &quot;TableName&quot;}]" Name="dataTable" />
+      <Variable x:TypeArguments="uisad:IDocumentData(uisascb:CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db)" Name="documentData" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:ManualTrigger Result="{x:Null}" DisplayName="Manual Trigger" sap2010:WorkflowViewState.IdRef="ManualTrigger_1" />
+    <Assign DisplayName="Initialize First Output Row" sap2010:WorkflowViewState.IdRef="Assign_6">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:Int32">[CurrentRowNumber]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:Int32">[CurrentRowNumber+1]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uga:ForEachFileFolderConnections ConnectionAccountName="{x:Null}" ExistingLocation="{x:Null}" FolderIdBackup="{x:Null}" Length="{x:Null}" ManualEntryLocation="{x:Null}" QueryFilter="{x:Null}" AllLabels="W10=" AuthScopesInvalid="False" BrowserLocation="https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_DRIVE_FOLDER_ID" ConnectionId="11111111-1111-4111-8111-111111111111" CurrentItemVariableName="CurrentItem" DisplayName="For Each File or Folder" FilterSelectionMode="ConditionBuilder" sap2010:WorkflowViewState.IdRef="ForEachFileFolderConnections_2" LocationFriendlyName="CV" LocationInputMode="Browse" MaxResults="200" StarredOnly="False" UseConnectionService="True" WhatToReturn="FilesAndFolders">
+      <uga:ForEachFileFolderConnections.Body>
+        <ActivityAction x:TypeArguments="ugdm:GDriveRemoteItem, x:Int32">
+          <ActivityAction.Argument1>
+            <DelegateInArgument x:TypeArguments="ugdm:GDriveRemoteItem" Name="CurrentItem" />
+          </ActivityAction.Argument1>
+          <ActivityAction.Argument2>
+            <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentItemIndex" />
+          </ActivityAction.Argument2>
+          <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <ui:LogMessage DisplayName="Log Message" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[CurrentItem.Name]" />
+            <p:ExtractDocumentDataWithDocumentData x:TypeArguments="uisascb:CustomGptDocumentTypeF7C11867F71C41999C68E34Ce8Eba8Db" DocumentBounds="{x:Null}" DocumentObjectModel="{x:Null}" DocumentPath="{x:Null}" DocumentText="{x:Null}" ExtractorDocumentType="{x:Null}" ExtractorResult="{x:Null}" ModernDocumentTypeId="{x:Null}" PersistenceId="{x:Null}" PredictionId="{x:Null}" ProjectVersionNumber="{x:Null}" RuntimeAssetPath="{x:Null}" RuntimeTenantUrl="{x:Null}" ActivityMajorVersion="2" ApplyAutoValidation="False" DisplayName="Extract Document Data" DocType="generative_extractor" ExtractionResults="[documentData]" ExtractorName="Long Document Simple Layout Extractor" FileInput="[CurrentItem]" GenerateData="True" sap2010:WorkflowViewState.IdRef="ExtractDocumentDataWithDocumentData`1_1" ProjectId="00000000-0000-0000-0000-000000000001" ProjectName="Generative Predefined" TimeoutInSeconds="3600">
+              <p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
+                <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+                  <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="0" />
+                </InArgument>
+              </p:ExtractDocumentDataWithDocumentData.AutoValidationConfidenceThreshold>
+              <p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+                <InArgument x:TypeArguments="x:String" x:Key="CandidateName">Extract the full name of the candidate from the resume, usually at the top.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Education">Extract the candidate's education details, including the university name, degree obtained (such as Bachelor's, Master's, or PhD), and field of study (major). If multiple education entries are present, focus on the most recent or highest degree. Extract the QS world ranking only if it is explicitly mentioned in the document; otherwise return "Not specified".</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TechSkills">Extract all technical skills mentioned, such as programming languages, tools, or frameworks.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Company1">Extract the most recent company the candidate worked at (latest job).</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Title1">Extract the job title corresponding to the most recent company.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Company2">Extract the second most recent company (previous job before the latest).</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Title2">Extract the job title corresponding to the second most recent company.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Company3">Extract the third most recent company in reverse chronological order.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Title3">Extract the job title corresponding to the third most recent company.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">Extract the email address of the candidate.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="WorkDuration1">Extract the duration (start and end dates, or total years/months) of the most recent job experience. This should correspond to the latest company listed in the resume.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="WorkDuration2">Extract the duration (start and end dates, or total years/months) of the second most recent job experience, based on reverse chronological order. Ensure it matches the second most recent company.</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="WorkDuration3">Extract the duration (start and end dates, or total years/months) of the third most recent job experience, based on reverse chronological order. Ensure it matches the third most recent company.</InArgument>
+              </p:ExtractDocumentDataWithDocumentData.GptPromptWithVariables>
+              <p:ExtractDocumentDataWithDocumentData.ProjectTag>
+                <InArgument x:TypeArguments="x:String">
+                  <Literal x:TypeArguments="x:String" Value="" />
+                </InArgument>
+              </p:ExtractDocumentDataWithDocumentData.ProjectTag>
+            </p:ExtractDocumentDataWithDocumentData>
+            <!-- Legacy fixed-row output disabled: it wrote every CV to row 2 and left the final CV duplicated. -->
+            <!--
+            <uga:WriteCellConnections Cell="A2" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="CandidateName" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_1" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.CandidateName.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID0" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID0}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="B2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Education" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_2" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Education.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID1" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID1}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="C2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="TechSkills" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_3" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.TechSkills.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID2" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID2}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="D2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Company1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_4" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID3" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID3}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="E2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Title 1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_5" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID4" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID4}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="F2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="WorkDuration 1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_6" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID5" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID5}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="G2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Company 2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_7" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID6" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID6}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="H2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Title 2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_8" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID7" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID7}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="I2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="WorkDuration 2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_9" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID8" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID8}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="J2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Company 3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_10" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID9" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID9}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="K2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Title 3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_11" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID10" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID10}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="L2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="WorkDuration 3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_12" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID11" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID11}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="M2" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Email" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_13" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Email.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID12" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID12}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            -->
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;A&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description CandidateName" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_16" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.CandidateName.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID13" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID13}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;B&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Education" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_17" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Education.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID14" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID14}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;C&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Techskills" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_18" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.TechSkills.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID15" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID15}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;D&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Company1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_19" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID16" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID16}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;E&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Title1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_20" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID17" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID17}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;F&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Duration1" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_21" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration1.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID18" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID18}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;G&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Company2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_22" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID19" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID19}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;H&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Title2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_23" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID20" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID20}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;I&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Duration2" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_24" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration2.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID21" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID21}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;J&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Company3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_25" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Company3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID22" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID22}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;K&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Title3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_26" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Title3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID23" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID23}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;L&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Duration3" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_27" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.WorkDuration3.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID24" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID24}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;M&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Write Cell Description Email" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_28" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[documentData.Data.Email.Value]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID25" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID25}" ConnectionDescriptor="{x:Null}" ConnectionKey="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;N&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Mark Candidate Pending" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_29" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;Pending&quot;]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID26" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID26}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse">
+                  <ugam:DriveItemArgument.DriveId>
+                    <InArgument x:TypeArguments="x:String" />
+                  </ugam:DriveItemArgument.DriveId>
+                  <ugam:DriveItemArgument.ParentIdFullPathHint>
+                    <InArgument x:TypeArguments="x:String">
+                      <Literal x:TypeArguments="x:String" Value="" />
+                    </InArgument>
+                  </ugam:DriveItemArgument.ParentIdFullPathHint>
+                </ugam:DriveItemArgument>
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;T&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Reset Email Status" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_30" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;&quot;]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID27" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID27}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse" />
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;U&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Reset Email Detail Status" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_31" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;&quot;]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID28" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID28}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse" />
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;V&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Reset Communication Route" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_32" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;&quot;]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID29" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID29}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse" />
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <uga:WriteCellConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ManualEntrySpreadsheetId="{x:Null}" Spreadsheet="{x:Null}" AuthScopesInvalid="False" BrowserItemFriendlyName="Resume DateExtraction-Output" BrowserItemId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" Cell="[&quot;W&quot; + CurrentRowNumber.ToString]" ConnectionId="22222222-2222-4222-8222-222222222222" DisplayName="Reset Recipient Email" HideCell="False" sap2010:WorkflowViewState.IdRef="WriteCellConnections_33" ItemSelectionMode="Browse" RangeLocation="工作表1" UseConnectionService="True" WhatToWrite="[&quot;&quot;]">
+              <uga:WriteCellConnections.FileIdBackup>
+                <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" x:Name="__ReferenceID30" StoredValue="Browse">
+                  <usau:BackupSlot.BackupValues>
+                    <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+                  </usau:BackupSlot.BackupValues>
+                </usau:BackupSlot>
+              </uga:WriteCellConnections.FileIdBackup>
+              <uga:WriteCellConnections.Item>
+                <ugam:DriveItemArgument Backup="{x:Reference __ReferenceID30}" ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://docs.google.com/spreadsheets/d/REPLACE_WITH_YOUR_SPREADSHEET_ID/edit?usp=drivesdk" ConnectionKey="22222222-2222-4222-8222-222222222222" FriendlyName="Resume DateExtraction-Output" FullPathHint="My Drive/YourProject/Resume DateExtraction-Output" InputMode="Browse" />
+              </uga:WriteCellConnections.Item>
+            </uga:WriteCellConnections>
+            <Assign DisplayName="Assign 1" sap2010:WorkflowViewState.IdRef="Assign_5">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:Int32">[CurrentRowNumber]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:Int32">[CurrentRowNumber+1]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uga:ForEachFileFolderConnections.Body>
+      <uga:ForEachFileFolderConnections.Filter>
+        <ugadf:FileFilterArgument LogicalOperator="And">
+          <ugadf:FileFilterArgument.Filters>
+            <ugadf:SingleFileFilterArgument DateValue="{x:Null}" Value="{x:Null}" Values="{x:Null}" Criteria="Type" DateOperator="NewerThan" FileType="PDF" OwnerOperator="In" StringOperator="Contains" TextOperator="Contains" TypeOperator="Equals" />
+          </ugadf:FileFilterArgument.Filters>
+        </ugadf:FileFilterArgument>
+      </uga:ForEachFileFolderConnections.Filter>
+      <uga:ForEachFileFolderConnections.FilterSelectionBackup>
+        <usau:BackupSlot x:TypeArguments="ugae:FilterMode" StoredValue="ConditionBuilder">
+          <usau:BackupSlot.BackupValues>
+            <scg:Dictionary x:TypeArguments="ugae:FilterMode, scg:List(x:Object)" />
+          </usau:BackupSlot.BackupValues>
+        </usau:BackupSlot>
+      </uga:ForEachFileFolderConnections.FilterSelectionBackup>
+      <uga:ForEachFileFolderConnections.Item>
+        <ugam:DriveItemArgument ConnectionDescriptor="{x:Null}" Existing="{x:Null}" FullPath="{x:Null}" IdOrUrl="{x:Null}" ParentId="{x:Null}" ParentIdFriendlyName="{x:Null}" RelativePath="{x:Null}" BrowserId="https://drive.google.com/drive/folders/REPLACE_WITH_YOUR_DRIVE_FOLDER_ID" ConnectionKey="11111111-1111-4111-8111-111111111111" FriendlyName="CV" FullPathHint="My Drive/YourProject/CV" InputMode="Browse">
+          <ugam:DriveItemArgument.Backup>
+            <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
+              <usau:BackupSlot.BackupValues>
+                <scg:Dictionary x:TypeArguments="ugade:EDriveItemMode, scg:List(x:Object)" />
+              </usau:BackupSlot.BackupValues>
+            </usau:BackupSlot>
+          </ugam:DriveItemArgument.Backup>
+          <ugam:DriveItemArgument.DriveId>
+            <InArgument x:TypeArguments="x:String" />
+          </ugam:DriveItemArgument.DriveId>
+          <ugam:DriveItemArgument.ParentIdFullPathHint>
+            <InArgument x:TypeArguments="x:String">
+              <Literal x:TypeArguments="x:String" Value="" />
+            </InArgument>
+          </ugam:DriveItemArgument.ParentIdFullPathHint>
+        </ugam:DriveItemArgument>
+      </uga:ForEachFileFolderConnections.Item>
+    </uga:ForEachFileFolderConnections>
+  </Sequence>
+</Activity>

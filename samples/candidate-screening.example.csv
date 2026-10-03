@@ -1,0 +1,4 @@
+CandidateName,Education,TechSkills,Company1,Title1,Years1,Company2,Title2,Years2,TotalYears,Email,ProcessingStatus,MatchScore,ScreeningResult,ScreeningReason,MatchedSkills,MissingSkills,EmailStatus,EmailDetailStatus,CommunicationRoute,RecipientEmail
+Alex Example,BSc Computer Science,"Python; SQL; REST APIs",Example Systems,Software Engineer,3,Sample Labs,Junior Developer,2,5,alex.example@example.com,Pending,,,,,,,,
+Jordan Sample,MSc Data Science,"Python; Machine Learning; Git",Demo Analytics,Data Engineer,4,,,0,4,jordan.sample@example.com,Pending,,,,,,,,
+Taylor Demo,BSc Information Systems,"Java; Cloud; CI/CD",Illustration Tech,Platform Engineer,5,,,0,5,taylor.demo@example.com,Pending,,,,,,,,
